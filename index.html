@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZiggyLabs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar blur-6">
+        <a class="brand" href="#">
+            <img src="Assets/logo.jpeg" alt="Logo">
+            <span class="brand-name">ZiggyLabs</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="nav-menu">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header class="hero" aria-label="Featured hero section">
+        <div class="hero-carousel" aria-hidden="true">
+            <div class="hero-slide hero-slide--1 is-active"></div>
+            <div class="hero-slide hero-slide--2"></div>
+            <div class="hero-slide hero-slide--3"></div>
+        </div>
+
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <p class="eyebrow">Let's build your site</p>
+                <h1>Convert clicks into sales with our impactful, custom made website designs</h1>
+                <p>I help founders and small teams launch websites that look professional, communicate clearly, and convert visitors into customers.</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="services">
+            <h1>Our Services</h1>
+            <p>Whether you want a simple, one page website or a complex, multi page website, ZiggyLabs has you covered</p>
+
+            <div class="card-area card-body card corner-soft services-area">
+                <div class="service-card card-body card corner-soft">
+                    <h2>Affordable and easy website building</h2>
+                    <p>
+                        At ZiggyLabs, your website will be handled as if it was our own. With prices starting at only $100, you can trust our team of experts to enure your website is as perfect as possible
+                    </p>
+                </div>
+                <div class="service-cards">
+                    <div class="service-card card-body card corner-soft">
+                        <h2>Logo And Branding</h2>
+                        <p>
+                            Not sure what you want your logo to be? We can take care of that for you!
+                        </p>
+                    </div>
+
+                    <div class="service-card card-body card corner-soft">
+                        <h2>Web Development</h2>
+                        <p>
+                            From simple Websites to complex websites, ZiggyLabs can handle all types of needs
+                        </p>
+                    </div>
+
+                    <div class="service-card card-body card corner-soft">
+                        <h2>Search Engine Optimization</h2>
+                        <p>
+                            Rank higher on googles search results to gain more vistors to your site
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="pricing" class="pricing-section">
+            <div class="pricing-intro">
+                <h1>Pricing</h1>
+                <p>
+                    Every project is different, so the prices below are starting prices.
+                    If you have a unique idea or need something even more custom, feel free to contact us for a personalized quote by selecting Enterprise Website.
+                </p>
+            </div>
+
+            <h2>Website Packages</h2>
+
+            <div class="pricing-grid">
+                <div class="pricing-card card-body card corner-soft" data-modal-trigger="starter-website">
+                    <h3>Starter Website</h3>
+                    <h4>$89.99</h4>
+                    <ul>
+                        <li>Up to 3 Pages</li>
+                        <li>Modern Website Design</li>
+                        <li>Contact Form</li>
+                        <li>Basic SEO</li>
+                        <li>Desktop Layout</li>
+                        <li>1 Revision</li>
+                        <li>20 Custom Animations</li>
+                        <li>100% Ownership Rights</li>
+                        <li>100% Satisfaction Guarantee</li>
+                        <li>100% Money Back Guarantee</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card pricing-card-popular card-body card corner-soft" data-modal-trigger="standard-website">
+                    <span class="pricing-badge">Popular</span>
+                    <h3>Standard Website</h3>
+                    <h4>$174.99</h4>
+                    <ul>
+                        <li>Up to 8 Pages</li>
+                        <li>Everything in Starter</li>
+                        <li>Enhanced Design</li>
+                        <li>More Customization</li>
+                        <li>3 Revisions</li>
+                        <li>Enhanced Mobile Optimization</li>
+                        <li>Unlimited Custom Animations</li>
+                        <li>100% Ownership Rights</li>
+                        <li>100% Satisfaction Guarantee</li>
+                        <li>100% Money Back Guarantee</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card card-body card corner-soft" data-modal-trigger="professional-website">
+                    <h3>Professional Website</h3>
+                    <h4>$349.99</h4>
+                    <ul>
+                        <li>Up to 20 Pages</li>
+                        <li>Fully Custom Design</li>
+                        <li>Advanced Features</li>
+                        <li>Priority Support</li>
+                        <li>Enhanced Mobile Optimization</li>
+                        <li>Unlimited Revisions During Development</li>
+                        <li>Unlimited Custom Animations</li>
+                        <li>100% Ownership Rights</li>
+                        <li>100% Satisfaction Guarantee</li>
+                        <li>100% Money Back Guarantee</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card card-body card corner-soft">
+                    <h3>Enterprise Website</h3>
+                    <h4>Custom Quote</h4>
+                    <ul>
+                        <li>20+ Pages</li>
+                        <li>Custom Features</li>
+                        <li>Dashboards & Portals</li>
+                        <li>Database Integration</li>
+                        <li>Advanced Security</li>
+                        <li>100% Ownership Rights</li>
+                        <li>100% Satisfaction Guarantee</li>
+                        <li>100% Money Back Guarantee</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modals" aria-label="Modal container"></div>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/modal-script.js"></script>
+    <script src="scripts/plan-modal-injector.js"></script>
+</body>
+</html>

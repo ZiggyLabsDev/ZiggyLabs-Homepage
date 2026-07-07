@@ -1,0 +1,58 @@
+{
+  "ai-chatbot": {
+    "title": "AI Chatbot",
+    "description": "A smart chatbot that can answer visitor questions, capture leads, and guide users through your site automatically."
+  },
+  "enhanced-mobile-optimization": {
+    "title": "Enhanced Mobile Optimization",
+    "description": "Improves how your site performs and appears on phones and tablets, including faster loading and touch-friendly layouts."
+  },
+  "extra-page": {
+    "title": "Extra Page",
+    "description": "Adds one more page to your website, such as an About, Services, or Contact page."
+  },
+  "custom-animations": {
+    "title": "Custom Animations",
+    "description": "Adds polished motion effects to make your website feel more dynamic and engaging."
+  },
+  "image-gallery": {
+    "title": "Image Gallery",
+    "description": "Creates a clean, interactive gallery so you can showcase photos, products, or portfolio work."
+  },
+  "logo-design": {
+    "title": "Logo Design",
+    "description": "Includes a custom logo concept tailored to your brand style, colors, and business identity."
+  },
+  "appointment-booking": {
+    "title": "Appointment Booking",
+    "description": "Adds a booking system so clients can schedule appointments directly from your website."
+  },
+  "advanced-seo": {
+    "title": "Advanced SEO",
+    "description": "Improves your site’s visibility in search engines with deeper keyword targeting, metadata, and structure improvements."
+  },
+  "google-analytics-setup": {
+    "title": "Google Analytics Setup",
+    "description": "Connects your website to Google Analytics so you can track visitors, traffic sources, and user behavior."
+  },
+  "json-file-integration": {
+    "title": "JSON File Integration / Dynamic Website",
+    "description": "Lets your site pull content from structured JSON files and supports a more dynamic, updateable experience for your website."
+  },
+  "static-website": {
+    "title": "Static Website",
+    "description": "A simpler website setup that serves fixed content and is ideal for marketing or informational sites."
+  },
+  "dynamic-website": {
+    "title": "Dynamic / Updateable Website",
+    "description": "A website that can be updated more easily over time with changing content, features, or data-driven sections."
+  },
+  "user-account-system": {
+    "title": "User Account System",
+    "description": "Adds secure sign-in and account features so visitors can create profiles, save preferences, and access protected content."
+  },
+  "no-database": {
+    "title": "No Database",
+    "description": "Keeps the website lightweight by avoiding a database layer, which can be ideal for simpler static or content-driven projects."
+  }
+}
