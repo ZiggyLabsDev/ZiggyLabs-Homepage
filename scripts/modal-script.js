@@ -124,7 +124,6 @@ function shouldStackModal(triggerElement, targetId) {
 }
 
 function shouldReplaceModal(triggerElement, targetId) {
-  if (targetId && (targetId.endsWith('-maintenance') || targetId.endsWith('-questionnaire'))) return true;
   const trigger = triggerElement && typeof triggerElement.closest === 'function'
     ? triggerElement.closest('[data-modal-replace]')
     : null;
@@ -299,6 +298,20 @@ function setupModalEvents() {
       return;
     }
 
+    const backTrigger = target.closest('[data-modal-back]');
+    if (backTrigger) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const backTargetId = backTrigger.dataset.modalBackTarget || (activeModalId === 'website-questionnaire' ? `${document.getElementById('website-questionnaire')?.dataset.selectedPlanId || ''}-maintenance` : '');
+      closeModal();
+
+      if (backTargetId && activeModalId !== backTargetId) {
+        openModal(backTargetId, backTrigger);
+      }
+      return;
+    }
+
     const closeButton = target.closest('[data-modal-close]');
     if (closeButton && activeModalId) {
       event.preventDefault();
@@ -336,6 +349,10 @@ function setupModalEvents() {
 function initAddonModal(modal) {
   const totalElement = modal.querySelector('[data-addon-total]');
   const checkboxes = modal.querySelectorAll('input[data-addon-price]');
+  const noDatabaseCheckbox = modal.querySelector('input[data-addon-key="no-database"]');
+  const noDatabaseDependentCheckboxes = Array.from(modal.querySelectorAll(
+    'input[data-addon-key="ai-chatbot"], input[data-addon-key="appointment-booking"], input[data-addon-key="user-account-system"]'
+  ));
   const extraPageCheckbox = modal.querySelector('input[data-addon-type="extra-pages"]');
   const extraPageDetail = modal.querySelector('[data-addon-detail="extra-pages"]');
   const extraPageCountInput = extraPageDetail ? extraPageDetail.querySelector('input') : null;
@@ -371,7 +388,34 @@ function initAddonModal(modal) {
     totalElement.textContent = formatCurrency(total);
   }
 
+  function applyNoDatabaseDependencies() {
+    if (!noDatabaseCheckbox || noDatabaseDependentCheckboxes.length === 0) return;
+
+    const noDatabaseSelected = noDatabaseCheckbox.checked;
+
+    noDatabaseDependentCheckboxes.forEach((checkbox) => {
+      if (!checkbox.dataset.initialDisabled) {
+        checkbox.dataset.initialDisabled = checkbox.disabled ? 'true' : 'false';
+      }
+
+      const initiallyDisabled = checkbox.dataset.initialDisabled === 'true';
+
+      if (noDatabaseSelected && checkbox.checked) {
+        checkbox.checked = false;
+      }
+
+      checkbox.disabled = noDatabaseSelected || initiallyDisabled;
+      const option = checkbox.closest('.addon-option');
+      if (option) {
+        option.classList.toggle('greyed-out', checkbox.disabled);
+      }
+    });
+  }
+
   checkboxes.forEach((checkbox) => checkbox.addEventListener('change', () => {
+    if (checkbox.dataset.addonKey === 'no-database') {
+      applyNoDatabaseDependencies();
+    }
     if (checkbox.dataset.addonType === 'extra-pages') {
       toggleDetail(checkbox, extraPageDetail);
     }
@@ -391,6 +435,8 @@ function initAddonModal(modal) {
   if (logoDesignCheckbox) {
     toggleDetail(logoDesignCheckbox, logoDesignDetail);
   }
+
+  applyNoDatabaseDependencies();
 
   updateTotal();
 }

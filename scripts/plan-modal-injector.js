@@ -1,4 +1,7 @@
 (() => {
+  const API_BASE_URL = window.location.protocol === 'file:' ? 'http://localhost:3000' : '';
+  const PLAN_REQUEST_ENDPOINT = `${API_BASE_URL}/api/plan-request`;
+
   const maintenancePlanOptions = [
     {
       id: 'none',
@@ -97,7 +100,7 @@
           priceDisplay: '+$40.00',
           helpKey: 'appointment-booking',
           disabled: true,
-          disabledText: 'Requires Standard Website or Higher'
+          disabledText: 'Requires Professianal Website or Higher'
         },
         {
           name: 'Advanced SEO',
@@ -176,7 +179,9 @@
           name: 'Appointment Booking',
           price: 40.00,
           priceDisplay: '+$40.00',
-          helpKey: 'appointment-booking'
+          helpKey: 'appointment-booking',
+          disabled: true,
+          disabledText: 'Requires Professianal Website or Higher'
         },
         {
           name: 'Advanced SEO',
@@ -298,7 +303,6 @@
           </label>
         </div>`;
     }
-
     return `
       <div class="addon-detail" data-addon-detail="logo-design" id="${detailId}" hidden>
         <label class="addon-detail-field" for="${fieldId}">
@@ -347,8 +351,8 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="button button-secondary" data-modal-close>Back</button>
-            <button type="button" class="button button-primary" data-modal-trigger="website-questionnaire" data-modal-replace="true">Next</button>
+            <button type="button" class="button button-secondary" data-modal-back data-modal-back-target="${plan.id}">Back</button>
+            <button type="button" class="button button-primary" data-modal-trigger="website-questionnaire" data-modal-replace="true" data-plan-id="${plan.id}">Next</button>
           </div>
         </div>
       </div>`;
@@ -369,15 +373,15 @@
                 <div class="contact-grid">
                   <label class="text-field">
                     <span>Name</span>
-                    <input type="text" placeholder="Your name" required>
+                    <input type="text" id="questionnaire-name" name="name" placeholder="Your name" required>
                   </label>
                   <label class="text-field">
                     <span>Email</span>
-                    <input type="email" placeholder="you@example.com" required>
+                    <input type="email" id="questionnaire-email" name="email" placeholder="you@example.com" required>
                   </label>
                   <label class="text-field">
                     <span>Phone</span>
-                    <input type="tel" placeholder="(555) 123-4567">
+                    <input type="tel" id="questionnaire-phone" name="phone" placeholder="(555) 123-4567">
                   </label>
                 </div>
               </div>
@@ -402,10 +406,29 @@
                 <h3>In a few paragraphs, please explain exactly what website you need. Please be as detailed as possible.</h3>
                 <label class="text-field text-field--full">
                   <span>Project details</span>
-                  <textarea rows="6" required placeholder="Explain what website you need"></textarea>
+                  <textarea id="questionnaire-project-details" name="projectDetails" rows="6" required placeholder="Explain what website you need"></textarea>
                 </label>
               </div>
             </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="button button-primary" data-questionnaire-submit>Submit</button>
+            <button type="button" class="hide" data-modal-trigger="questionnaire-thanks" data-modal-replace="true" aria-hidden="true"></button>
+            <button type="button" class="button button-secondary" data-modal-back>Back</button>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function createQuestionnaireThanksModalMarkup() {
+    return `
+      <div id="questionnaire-thanks" class="modal-small" tabindex="-1">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Thanks!</h2>
+          </div>
+          <div class="modal-body">
+            <p class="modal-intro">In about 1-3 Buisness days our team will reatch out to you to figure out the deatails</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="button button-secondary" data-modal-close>Close</button>
@@ -416,6 +439,9 @@
 
   function createAddonMarkup(plan, addon) {
     const inputAttributes = [`data-addon-price="${addon.price.toFixed(2)}"`];
+    if (addon.helpKey) {
+      inputAttributes.push(`data-addon-key="${addon.helpKey}"`);
+    }
     if (addon.type) {
       inputAttributes.push(`data-addon-type="${addon.type}"`);
     }
@@ -489,6 +515,7 @@
       ...plans.map((plan) => createPlanModalMarkup(plan)),
       ...plans.map((plan) => createMaintenanceModalMarkup(plan)),
       createQuestionnaireModalMarkup(),
+      createQuestionnaireThanksModalMarkup(),
       createHelpModalMarkup()
     ].join('');
 
@@ -496,4 +523,176 @@
   }
 
   injectModalMarkup();
+
+  function parseCurrencyValue(textValue) {
+    const parsed = parseFloat((textValue || '').replace(/[^0-9.-]+/g, ''));
+    return Number.isNaN(parsed) ? 0 : parsed;
+  }
+
+  function collectSelectedAddons(planModal) {
+    if (!planModal) return [];
+
+    const selectedAddons = [];
+    const addonCheckboxes = planModal.querySelectorAll('input[type="checkbox"][data-addon-price]');
+
+    addonCheckboxes.forEach((checkbox) => {
+      if (!checkbox.checked) return;
+
+      const optionElement = checkbox.closest('.addon-option');
+      const addonName = optionElement?.querySelector('.addon-copy strong')?.textContent?.trim() || 'Unknown add-on';
+      const addonType = checkbox.dataset.addonType || null;
+      const unitPrice = parseFloat(checkbox.dataset.addonPrice || '0');
+
+      let quantity = 1;
+      let details = null;
+      let totalPrice = unitPrice;
+
+      if (addonType === 'extra-pages') {
+        const quantityInput = planModal.querySelector('[data-addon-detail="extra-pages"] input');
+        const parsedQuantity = parseInt(quantityInput?.value || '1', 10);
+        quantity = Number.isNaN(parsedQuantity) || parsedQuantity < 1 ? 1 : parsedQuantity;
+        totalPrice = unitPrice * quantity;
+      }
+
+      if (addonType === 'logo-design') {
+        const ideaInput = planModal.querySelector('[data-addon-detail="logo-design"] textarea');
+        details = {
+          logoIdea: (ideaInput?.value || '').trim()
+        };
+      }
+
+      selectedAddons.push({
+        key: checkbox.dataset.addonKey || null,
+        name: addonName,
+        type: addonType,
+        quantity,
+        unitPrice,
+        totalPrice,
+        details
+      });
+    });
+
+    return selectedAddons;
+  }
+
+  function collectSubmissionPayload(questionnaireModal) {
+    const selectedPlanId = questionnaireModal.dataset.selectedPlanId || '';
+    const selectedPlan = plans.find((plan) => plan.id === selectedPlanId) || null;
+
+    const planModal = selectedPlanId ? document.getElementById(selectedPlanId) : null;
+    const maintenanceModal = selectedPlanId ? document.getElementById(`${selectedPlanId}-maintenance`) : null;
+
+    const addonTotalValue = parseCurrencyValue(planModal?.querySelector('[data-addon-total]')?.textContent);
+    const finalTotalValue = parseCurrencyValue(maintenanceModal?.querySelector('[data-maintenance-total]')?.textContent);
+    const selectedMaintenanceInput = maintenanceModal?.querySelector('input[data-maintenance-price]:checked');
+    const maintenanceOption = maintenancePlanOptions.find((option) => option.id === selectedMaintenanceInput?.value) || null;
+    const selectedAddons = collectSelectedAddons(planModal);
+
+    const questionnaire = {
+      name: (questionnaireModal.querySelector('#questionnaire-name')?.value || '').trim(),
+      email: (questionnaireModal.querySelector('#questionnaire-email')?.value || '').trim(),
+      phone: (questionnaireModal.querySelector('#questionnaire-phone')?.value || '').trim(),
+      websiteGoal: questionnaireModal.querySelector('input[name="website-goal"]:checked')?.value || null,
+      timeline: questionnaireModal.querySelector('input[name="timeline"]:checked')?.value || null,
+      projectDetails: (questionnaireModal.querySelector('#questionnaire-project-details')?.value || '').trim()
+    };
+
+    return {
+      submittedAt: new Date().toISOString(),
+      plan: {
+        id: selectedPlan?.id || null,
+        heading: selectedPlan?.heading || null,
+        basePrice: selectedPlan?.basePrice ?? null,
+        websiteTotal: addonTotalValue,
+        finalTotal: finalTotalValue
+      },
+      maintenance: {
+        id: maintenanceOption?.id || null,
+        name: maintenanceOption?.name || null,
+        price: maintenanceOption?.price ?? 0
+      },
+      addons: selectedAddons,
+      questionnaire
+    };
+  }
+
+  async function submitPlanRequest(payload) {
+    const response = await fetch(PLAN_REQUEST_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!response.ok) {
+      throw new Error(`Plan request failed with status ${response.status}`);
+    }
+
+    return response.json().catch(() => ({}));
+  }
+
+  function setupQuestionnaireSubmission() {
+    const questionnaireModal = document.getElementById('website-questionnaire');
+    if (!questionnaireModal) return;
+
+    document.addEventListener('click', (event) => {
+      const trigger = event.target.closest('[data-modal-trigger]');
+      if (trigger) {
+        const triggerModalId = trigger.dataset.modalTrigger;
+        const explicitPlanId = trigger.dataset.planId;
+
+        if (plans.some((plan) => plan.id === triggerModalId)) {
+          questionnaireModal.dataset.selectedPlanId = triggerModalId;
+        }
+
+        if (triggerModalId === 'website-questionnaire' && explicitPlanId) {
+          questionnaireModal.dataset.selectedPlanId = explicitPlanId;
+        }
+      }
+
+      const submitButton = event.target.closest('[data-questionnaire-submit]');
+      if (!submitButton) return;
+
+      event.preventDefault();
+
+      const nameInput = questionnaireModal.querySelector('#questionnaire-name');
+      const emailInput = questionnaireModal.querySelector('#questionnaire-email');
+      const projectDetailsInput = questionnaireModal.querySelector('#questionnaire-project-details');
+
+      if (!nameInput?.value.trim() || !emailInput?.value.trim() || !projectDetailsInput?.value.trim()) {
+        alert('Please complete Name, Email, and Project details before submitting.');
+        return;
+      }
+
+      if (!questionnaireModal.dataset.selectedPlanId) {
+        alert('Please choose a plan before submitting your request.');
+        return;
+      }
+
+      const originalText = submitButton.textContent;
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+
+      const payload = collectSubmissionPayload(questionnaireModal);
+
+      void submitPlanRequest(payload)
+        .then(() => {
+          const thanksTrigger = questionnaireModal.querySelector('[data-modal-trigger="questionnaire-thanks"]');
+          if (thanksTrigger) {
+            thanksTrigger.click();
+          }
+        })
+        .catch((error) => {
+          console.error('Failed to submit questionnaire:', error);
+          alert('We could not submit your request right now. Please try again in a moment.');
+        })
+        .finally(() => {
+          submitButton.disabled = false;
+          submitButton.textContent = originalText;
+        });
+    });
+  }
+
+  setupQuestionnaireSubmission();
 })();
