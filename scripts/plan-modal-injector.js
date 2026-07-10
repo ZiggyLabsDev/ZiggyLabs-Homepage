@@ -281,6 +281,83 @@
           helpKey: 'no-database'
         }
       ]
+    },
+    {
+      id: 'enterprise-website',
+      heading: 'Great, you have selected our Enterprise Website Plan. Select any Add-ons you want below:',
+      basePrice: 0.00,
+      intro: 'Choose the extras that fit your project',
+      addons: [
+        {
+          name: 'AI Chatbot',
+          price: 130.00,
+          priceDisplay: 'Starting at $130.00',
+          helpKey: 'ai-chatbot'
+        },
+        {
+          name: 'Extra Page',
+          price: 15.00,
+          priceDisplay: '+$15.00 each',
+          helpKey: 'extra-page',
+          type: 'extra-pages',
+          detailLabel: 'How many extra pages do you need?',
+          detailInputType: 'number',
+          detailMin: 1,
+          detailValue: 1
+        },
+        {
+          name: 'Image Carosel',
+          price: 30.00,
+          priceDisplay: '+$30.00',
+          helpKey: 'image-gallery'
+        },
+        {
+          name: 'JSON File Integration / Dynamic Website',
+          price: 35.00,
+          priceDisplay: '+$35.00',
+          helpKey: 'json-file-integration'
+        },
+        {
+          name: 'Logo Design',
+          price: 75.00,
+          priceDisplay: 'Starting at $75.00',
+          helpKey: 'logo-design',
+          type: 'logo-design',
+          detailLabel: 'What would you like your logo to include?',
+          detailTextarea: true,
+          detailPlaceholder: 'Describe your logo idea here...'
+        },
+        {
+          name: 'Appointment Booking',
+          price: 40.00,
+          priceDisplay: '+$40.00',
+          helpKey: 'appointment-booking'
+        },
+        {
+          name: 'Advanced SEO',
+          price: 35.00,
+          priceDisplay: '+$35.00',
+          helpKey: 'advanced-seo'
+        },
+        {
+          name: 'User Account System',
+          price: 20.00,
+          priceDisplay: '+$20.00',
+          helpKey: 'user-account-system'
+        },
+        {
+          name: 'Google Analytics Setup',
+          price: 25.00,
+          priceDisplay: '+$25.00',
+          helpKey: 'google-analytics-setup'
+        },
+        {
+          name: 'No Database',
+          price: -10.00,
+          priceDisplay: '-$10.00',
+          helpKey: 'no-database'
+        }
+      ]
     }
   ];
 
@@ -600,9 +677,9 @@
     return {
       submittedAt: new Date().toISOString(),
       plan: {
-        id: selectedPlan?.id || null,
-        heading: selectedPlan?.heading || null,
-        basePrice: selectedPlan?.basePrice ?? null,
+        id: selectedPlan?.id || selectedPlanId || null,
+        heading: selectedPlan?.heading || selectedPlanId || null,
+        basePrice: selectedPlan?.basePrice ?? 0,
         websiteTotal: addonTotalValue,
         finalTotal: finalTotalValue
       },
