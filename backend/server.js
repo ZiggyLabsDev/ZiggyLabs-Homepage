@@ -1,25 +1,42 @@
 const crypto = require("crypto");
 const express = require("express");
+const cors = require('cors');
 const path = require("path");
 require("dotenv").config({ path: path.join(__dirname, ".env") });
 const db = require("./database/db");
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
-const frontendRoot = path.join(__dirname, "..");
+const frontendRoot = resolveFrontendRoot();
 const pagesRoot = path.join(frontendRoot, "pages");
 const scriptsRoot = path.join(frontendRoot, "scripts");
 const assetsRoot = path.join(frontendRoot, "assets");
+const supportRoot = path.join(frontendRoot, "support");
 const ADMIN_SESSION_COOKIE = "ziggylabs_admin_session";
 const ADMIN_SESSION_MAX_AGE_MS = 1000 * 60 * 60 * 12;
 const ADMIN_PASSWORD_HASH = requireEnv("ADMIN_PASSWORD_HASH");
 const ADMIN_SESSION_SECRET = requireEnv("ADMIN_SESSION_SECRET");
 
+// Allows JSON to be received
+app.use(express.json());
+
+app.use(cors({
+  origin: [
+    'http://localhost:3000', 
+    'https://ziggylabs.dev', 
+    'https://support.ziggylabs.dev' // FIX: Ensure this is your support subdomain link!
+  ],
+  methods: ['POST'],
+  allowedHeaders: ['Content-Type']
+}));
+
 const PLAN_NAME_BY_ID = {
     "starter-website": "Starter",
     "standard-website": "Standard",
     "professional-website": "Professional",
-    "enterprise-website": "Enterprise"
+    "enterprise-website": "Enterprise",
+    "fix-site-plan": "Fix Site Plan",
+    "not-sure-plan": "Not Sure Which Option Is Right"
 };
 
 const WEBSITE_GOAL_LABELS = {
@@ -37,6 +54,49 @@ const TIMELINE_LABELS = {
 
 const ALLOWED_STATUS = new Set(["new", "in-progress", "finished"]);
 const ALLOWED_PAYMENT_STATUS = new Set(["waiting", "paid"]);
+const ALLOWED_CORS_ORIGINS = new Set([
+    "https://ziggylabs.dev",
+    "https://support.ziggylabs.dev"
+]);
+
+function resolveFrontendRoot() {
+    const configured = process.env.FRONTEND_ROOT ? path.resolve(process.env.FRONTEND_ROOT) : null;
+    if (configured) {
+        if (fsExists(path.join(configured, "index.html"))) {
+            return configured;
+        }
+
+        const configuredPublic = path.join(configured, "public");
+        if (fsExists(path.join(configuredPublic, "index.html"))) {
+            return configuredPublic;
+        }
+    }
+
+    const parent = path.join(__dirname, "..");
+    const parentPublicHtml = path.join(parent, "public_html");
+    if (fsExists(path.join(parentPublicHtml, "index.html"))) {
+        return parentPublicHtml;
+    }
+
+    const parentPublic = path.join(parent, "public");
+    if (fsExists(path.join(parentPublic, "index.html"))) {
+        return parentPublic;
+    }
+
+    if (fsExists(path.join(parent, "index.html"))) {
+        return parent;
+    }
+
+    return __dirname;
+}
+
+function fsExists(filePath) {
+    try {
+        return require("fs").existsSync(filePath);
+    } catch {
+        return false;
+    }
+}
 
 function requireEnv(name) {
     const value = process.env[name];
@@ -424,6 +484,28 @@ function sendPage(fileName) {
     };
 }
 
+function sendSupportPage(fileName) {
+    return (req, res) => {
+        res.sendFile(path.join(frontendRoot, "support", fileName));
+    };
+}
+
+function getRequestHost(req) {
+    const rawHost = (req.headers["x-forwarded-host"] || req.headers.host || "").toString().trim().toLowerCase();
+    return rawHost.replace(/:\d+$/, "");
+}
+
+function isSupportSubdomainRequest(req) {
+    const host = getRequestHost(req);
+    return host === "support.ziggylabs.dev" || host.startsWith("support.");
+}
+
+function getSiteBaseUrl(req) {
+    const proto = req.headers["x-forwarded-proto"] || req.protocol;
+    const host = req.headers["x-forwarded-host"] || req.get("host");
+    return `${proto}://${host}`;
+}
+
 const publicStaticOptions = {
     dotfiles: "deny",
     fallthrough: false,
@@ -476,14 +558,14 @@ function validateBugReport(body) {
     return null;
 }
 
-// Allows JSON to be received
-app.use(express.json());
-
-// Allow frontend requests from local file/static hosts.
+// Allow frontend requests from local file/static hosts and the production domains.
 app.use((req, res, next) => {
     const origin = req.headers.origin;
+    const normalizedOrigin = typeof origin === "string" ? origin.trim().toLowerCase() : "";
+    const isLocalOrigin = normalizedOrigin === "null" || /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(normalizedOrigin);
+    const isAllowedOrigin = isLocalOrigin || ALLOWED_CORS_ORIGINS.has(normalizedOrigin);
 
-    if (origin === "null" || /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(origin)) {
+    if (isAllowedOrigin && origin) {
         res.header("Access-Control-Allow-Origin", origin);
         res.header("Access-Control-Allow-Credentials", "true");
         res.header("Vary", "Origin");
@@ -508,6 +590,10 @@ app.use((req, res, next) => {
 });
 
 app.get("/", (req, res) => {
+    if (isSupportSubdomainRequest(req)) {
+        return sendSupportPage("index.html")(req, res);
+    }
+
     res.sendFile(path.join(frontendRoot, "index.html"));
 });
 
@@ -523,33 +609,133 @@ app.get("/dictionary.json", (req, res) => {
     res.sendFile(path.join(frontendRoot, "dictionary.json"));
 });
 
-app.get("/report-bug", sendPage("report-bug.html"));
+app.get("/robots.txt", (req, res) => {
+    const baseUrl = getSiteBaseUrl(req);
+
+    res.type("text/plain").send([
+        "User-agent: *",
+        "Allow: /",
+        "Disallow: /admin",
+        "Disallow: /admin/",
+        "Disallow: /pages/admin",
+        "Disallow: /pages/admin/",
+        "Disallow: /api/admin",
+        "Disallow: /pages/",
+        `Sitemap: ${baseUrl}/sitemap.xml`
+    ].join("\n"));
+});
+
+app.get("/sitemap.xml", (req, res) => {
+    const baseUrl = getSiteBaseUrl(req);
+    const lastModified = new Date().toISOString();
+    const publicPages = [
+        "/",
+        "/about",
+        "/pricing",
+        "/terms-of-service",
+        "/privacy-policy"
+    ];
+
+    const xml = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+        ...publicPages.map((pagePath, index) => [
+            "  <url>",
+            `    <loc>${baseUrl}${pagePath}</loc>`,
+            `    <lastmod>${lastModified}</lastmod>`,
+            "    <changefreq>weekly</changefreq>",
+            `    <priority>${index === 0 ? "1.0" : "0.6"}</priority>`,
+            "  </url>"
+        ].join("\n")),
+        "</urlset>"
+    ].join("\n");
+
+    res.type("application/xml").send(xml);
+});
+
+app.get("/client", (req, res) => {
+    if (isSupportSubdomainRequest(req)) {
+        return sendSupportPage("client/index.html")(req, res);
+    }
+
+    res.redirect(301, "https://support.ziggylabs.dev/client");
+});
+
+app.get("/bug-style.css", (req, res, next) => {
+    if (!isSupportSubdomainRequest(req)) {
+        return next();
+    }
+
+    res.sendFile(path.join(supportRoot, "bug-style.css"));
+});
+
+app.get("/bug-script.js", (req, res, next) => {
+    if (!isSupportSubdomainRequest(req)) {
+        return next();
+    }
+
+    res.sendFile(path.join(supportRoot, "bug-script.js"));
+});
+
+app.get("/report-bug.html", (req, res) => {
+    if (isSupportSubdomainRequest(req)) {
+        return res.redirect(301, "/");
+    }
+
+    res.redirect(301, "https://support.ziggylabs.dev/");
+});
+
+app.get("/client-report-bug.html", (req, res) => {
+    if (isSupportSubdomainRequest(req)) {
+        return res.redirect(301, "/client");
+    }
+
+    res.redirect(301, "https://support.ziggylabs.dev/client");
+});
+
+app.get("/report-bug", (req, res) => {
+    if (isSupportSubdomainRequest(req)) {
+        return res.redirect(301, "/");
+    }
+
+    res.redirect(301, "https://support.ziggylabs.dev/");
+});
+
+app.get("/pages/report-bug.html", (req, res) => {
+    if (isSupportSubdomainRequest(req)) {
+        return res.redirect(301, "/");
+    }
+
+    res.redirect(301, "https://support.ziggylabs.dev/");
+});
+
+app.get("/pages/client-report-bug.html", (req, res) => {
+    if (isSupportSubdomainRequest(req)) {
+        return res.redirect(301, "/client");
+    }
+
+    res.redirect(301, "https://support.ziggylabs.dev/client");
+});
+
+
+app.get(["/about", "/about/"], sendPage("about.html"));
+app.get(["/pricing", "/pricing/"], sendPage("pricing.html"));
+app.get(["/terms-of-service", "/terms-of-service/"], sendPage("terms-of-service.html"));
+app.get(["/privacy-policy", "/privacy-policy/"], sendPage("privacy-policy.html"));
 app.get("/admin/login", sendPage("admin-login.html"));
 app.get("/admin", requireAdminPage("admin.html"));
 app.get("/admin/client", requireAdminPage("admin-client.html"));
 app.get("/admin/bugs", requireAdminPage("admin-bugs.html"));
 
-app.get("/pages/report-bug.html", (req, res) => {
-    res.redirect(301, "/report-bug");
-});
-
-app.get("/pages/admin-login.html", (req, res) => {
-    res.redirect(301, "/admin/login");
-});
-
-app.get("/pages/admin.html", (req, res) => {
-    res.redirect(301, "/admin");
-});
-
-app.get("/pages/admin-client.html", (req, res) => {
-    const id = getTrimmedString(req.query?.id);
-    const suffix = id ? `?id=${encodeURIComponent(id)}` : "";
-    res.redirect(301, `/admin/client${suffix}`);
-});
-
-app.get("/pages/admin-bugs.html", (req, res) => {
-    res.redirect(301, "/admin/bugs");
-});
+// Support legacy page URLs alongside clean URLs.
+app.get("/pages/about.html", (req, res) => res.redirect(301, "/about"));
+app.get("/pages/pricing.html", (req, res) => res.redirect(301, "/pricing"));
+app.get("/pages/terms-of-service.html", (req, res) => res.redirect(301, "/terms-of-service"));
+app.get("/pages/privacy-policy.html", (req, res) => res.redirect(301, "/privacy-policy"));
+app.get("/pages/admin-login.html", sendPage("admin-login.html"));
+app.get("/pages/admin.html", requireAdminPage("admin.html"));
+app.get("/pages/admin-client.html", requireAdminPage("admin-client.html"));
+app.get("/pages/admin-bugs.html", requireAdminPage("admin-bugs.html"));
 
 // Test route
 app.get("/api/test", (req, res) => {
@@ -841,9 +1027,12 @@ app.delete("/api/admin/clients/:id", requireAdminAuth, (req, res) => {
     });
 });
 
+app.use(express.static(frontendRoot, publicStaticOptions));
+
 app.use("/scripts", express.static(scriptsRoot, publicStaticOptions));
 app.use("/assets", express.static(assetsRoot, publicStaticOptions));
 app.use("/Assets", express.static(assetsRoot, publicStaticOptions));
+app.use("/support", express.static(supportRoot, publicStaticOptions));
 
 app.listen(PORT, () => {
     console.log(`Backend running on http://localhost:${PORT}`);

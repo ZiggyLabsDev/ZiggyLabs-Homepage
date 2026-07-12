@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report a Bug — ZiggyLabs Development</title>
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <link rel="canonical" href="https://support.ziggylabs.dev" />
+  <link rel="stylesheet" href="bug-style.css">
+
+</head>
+<body>
+  <div class="page-wrap">
+    <div class="card">
+      <p class="eyebrow">Bug Reports</p>
+      <h1>Report a Bug</h1>
+      <p class="intro">Tell us what broke, where it happened, and what you were doing. The more specific you are, the faster it is to fix.</p>
+
+      <form id="bug-report-form" novalidate>
+        <div class="grid">
+          <div class="field-full">
+            <label for="page-url">URL</label>
+            <input id="page-url" name="pageUrl" type="text" placeholder="Please paste the URL of the page that had the bug here." maxlength="400" />
+          </div>
+          <div class="field-full">
+            <label for="summary">Short Summary</label>
+            <input id="summary" name="summary" type="text" placeholder="Example: Navbar home page link stops working" maxlength="180" required />
+          </div>
+          <div class="field-full">
+            <label for="details">What Happened</label>
+            <textarea id="details" name="details" placeholder="Describe the bug, what you clicked, and what you expected to happen." maxlength="4000" required></textarea>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="submit-btn" id="submit-btn">Send Bug Report</button>
+          <a href="https://ziggylabs.dev" class="back-link">ZiggyLabs Development Home</a>
+        </div>
+        <div class="form-message" id="form-message"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="bug-script.js"></script>
+
+</body>
+</html>

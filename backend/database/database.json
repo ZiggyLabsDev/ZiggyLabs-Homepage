@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "nextClientId": 1,
+    "nextBugReportId": 2
+  },
+  "clients": [],
+  "bugReports": [
+    {
+      "id": 1,
+      "name": "",
+      "email": "",
+      "pageUrl": "",
+      "summary": "smoke",
+      "details": "smoke",
+      "createdAt": "2026-07-11T15:12:15.845Z"
+    }
+  ]
+}

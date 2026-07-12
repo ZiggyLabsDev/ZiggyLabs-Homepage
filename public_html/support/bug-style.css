@@ -1,0 +1,138 @@
+*, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(255, 150, 51, 0.16), transparent 34%),
+        radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.14), transparent 32%),
+        #050505;
+      color: #f7f7f7;
+    }
+    .page-wrap {
+      width: min(100% - 2rem, 760px);
+      margin: 0 auto;
+      padding: 2rem 0 4rem;
+    }
+    .notice {
+      margin-bottom: 1.25rem;
+      padding: 0.9rem 1rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 150, 51, 0.24);
+      background: rgba(255, 150, 51, 0.1);
+      color: rgba(247, 247, 247, 0.82);
+      line-height: 1.6;
+    }
+    .card {
+      padding: 2rem;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(14, 14, 20, 0.88);
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
+    }
+    .eyebrow {
+      margin: 0 0 0.7rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #ff9633;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0 0 0.8rem;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      line-height: 1.08;
+    }
+    .intro {
+      margin: 0 0 1.5rem;
+      color: rgba(247, 247, 247, 0.68);
+      line-height: 1.7;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .field,
+    .field-full {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-bottom: 1rem;
+    }
+    .field-full { grid-column: 1 / -1; }
+    label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(247, 247, 247, 0.48);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.04);
+      color: #f7f7f7;
+      font: inherit;
+    }
+    textarea { min-height: 180px; resize: vertical; }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: rgba(255, 150, 51, 0.55);
+      box-shadow: 0 0 0 3px rgba(255, 150, 51, 0.1);
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .submit-btn, .back-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3rem;
+      padding: 0 1.2rem;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      font: inherit;
+    }
+    .submit-btn {
+      border: none;
+      background: linear-gradient(135deg, #ff9633, #e07820);
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(255, 150, 51, 0.28);
+    }
+    .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+    .back-link {
+      color: rgba(247, 247, 247, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .form-message {
+      margin-top: 1rem;
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      display: none;
+      line-height: 1.6;
+    }
+    .form-message.is-success {
+      display: block;
+      background: rgba(74, 222, 128, 0.12);
+      border: 1px solid rgba(74, 222, 128, 0.26);
+      color: #9ae6b4;
+    }
+    .form-message.is-error {
+      display: block;
+      background: rgba(255, 80, 80, 0.12);
+      border: 1px solid rgba(255, 80, 80, 0.26);
+      color: #ff9b9b;
+    }
+    @media (max-width: 700px) {
+      .page-wrap { width: min(100% - 1rem, 760px); padding-top: 1rem; }
+      .card { padding: 1.25rem; border-radius: 18px; }
+      .grid { grid-template-columns: 1fr; gap: 0; }
+    }

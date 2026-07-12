@@ -1,0 +1,40 @@
+# ZiggyLabs Development
+> https://ziggylabs.dev
+
+ZiggyLabs Development is a professional web design and development studio focused on practical execution, clear communication, and conversion-focused websites that help small businesses and startups grow. 
+
+Built for founders who need results, not fluff, ZiggyLabs combines clean design, reliable engineering, and straightforward communication to make high-quality web development highly accessible.
+
+## Core Services
+- **Custom Website Design:** Fully bespoke layouts built from scratch tailored to specific goals, audiences, and budgets instead of using generic templates.
+- **Small Business Web Development:** Professional, fast, and mobile-responsive websites designed for startups, local businesses, and client portals.
+- **Performance-Minded Builds:** Modern, mobile-friendly infrastructure built to support real business outcomes.
+
+## Pricing Tiers (One-Time Payments)
+- **Starter Tier ($89.99):** Up to 3 pages, modern website design, contact form, basic SEO, desktop layout, 1 revision, 20 custom animations, 100% ownership rights, and 100% satisfaction guarantee.
+- **Standard Tier ($174.99):** Up to 8 pages, everything in Starter, enhanced design, more customization, 3 revisions, enhanced mobile optimization, and unlimited custom animations.
+- **Professional Tier ($349.99):** Up to 20 pages, fully custom design, advanced features, priority support, enhanced mobile optimization, and unlimited revisions during development.
+- **Enterprise Tier (Custom Quote):** 20+ pages, custom features, dashboards & portals, database integration, and advanced security features.
+- **Fix Site Plan (Custom Quote):** Existing site troubleshooting, design or layout fixes, performance improvements, SEO & content updates, and platform cleanup.
+
+## Optional Project Extras & Add-ons
+- **Enhanced Mobile Optimization:** +$20.00
+- **Extra Page:** +$15.00 each
+- **Unlimited Custom Animations:** +$25.00
+- **Image Carousel:** +$30.00
+- **JSON File Integration / Dynamic Website:** +$35.00
+- **Logo Design:** Starting at $75.00
+- **Appointment Booking (Requires Professional Tier+):** +$40.00
+- **Advanced SEO (Requires Standard Tier+):** +$40.00
+- **User Account System (Requires Professional Tier+):** +$50.00
+- **Google Analytics Setup (Requires Standard Tier+):** +$25.00
+- **And More!**
+
+## Ongoing Website Maintenance & Support Plans
+- **No Maintenance Plan ($0.00/month):** Self-managed option with no ongoing technical support or updates.
+- **Basic Maintenance ($9.99/month):** Automated security updates and core bug fixes.
+- **Standard Maintenance ($19.99/month):** Includes all Basic features, plus monthly manual content updates and automated website backups.
+- **Premium Maintenance ($39.99/month):** Includes all Standard features, plus priority developer support, server performance monitoring, and advanced feature updates.
+
+## Business Intake & Guided Quotes
+To launch a project or request a custom build blueprint, visit the official intake dashboard at https://ziggylabs.dev or request a direct quote link via home navigation.

@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client — ZiggyLabs Development Admin</title>
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <!-- Redirect to login immediately if not authenticated -->
+  <script>
+    const ADMIN_API_BASE_URL = window.location.protocol === 'file:' ? 'http://localhost:3000' : '';
+    const ADMIN_SESSION_ENDPOINT = `${ADMIN_API_BASE_URL}/api/admin/session`;
+
+    fetch(ADMIN_SESSION_ENDPOINT, { credentials: 'include' })
+      .then((response) => response.ok ? response.json() : null)
+      .then((payload) => {
+        if (!payload || !payload.authenticated) {
+          location.replace('/admin/login');
+        }
+      })
+      .catch(() => {
+        location.replace('/admin/login');
+      });
+  </script>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #050505;
+      color: #f7f7f7;
+      min-height: 100%;
+    }
+
+    /* ── Header ────────────────────────────────────────── */
+    .admin-header {
+      height: 3.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      background: rgba(7, 7, 10, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      gap: 1rem;
+    }
+
+    .admin-header .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: #f7f7f7;
+    }
+
+    .admin-header .brand img {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .admin-header .brand span { font-weight: 700; font-size: 1rem; }
+
+    .admin-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ff9633;
+      background: rgba(255, 150, 51, 0.1);
+      border: 1px solid rgba(255, 150, 51, 0.25);
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+    }
+
+    .admin-logout {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.9rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      background: transparent;
+      color: rgba(247, 247, 247, 0.6);
+      font: inherit;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+
+    .header-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .admin-link-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.35rem;
+      padding: 0 0.9rem;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #93c5fd;
+      border: 1px solid rgba(96, 165, 250, 0.25);
+      background: rgba(59, 130, 246, 0.08);
+    }
+
+    .admin-logout:hover {
+      color: #ff7070;
+      border-color: rgba(255, 100, 100, 0.35);
+      background: rgba(255, 80, 80, 0.06);
+    }
+
+    /* ── Page Content ──────────────────────────────────── */
+    .page-wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1.75rem 4rem;
+    }
+
+    /* ── Back link ─────────────────────────────────────── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: rgba(247, 247, 247, 0.5);
+      font-size: 0.88rem;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: #f7f7f7; }
+
+    /* ── Client hero ───────────────────────────────────── */
+    .client-hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .client-hero-left h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin: 0 0 0.4rem;
+    }
+
+    .client-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+
+    .client-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: rgba(247, 247, 247, 0.55);
+      font-size: 0.88rem;
+    }
+
+    .client-meta-item svg { flex-shrink: 0; }
+
+    /* ── Status badge ──────────────────────────────────── */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .status-badge::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .status-new { background: rgba(96,165,250,0.12); color: #60a5fa; border: 1px solid rgba(96,165,250,0.25); }
+    .status-new::before { background: #60a5fa; box-shadow: 0 0 5px #60a5fa; }
+
+    .status-in-progress { background: rgba(255,150,51,0.12); color: #ff9633; border: 1px solid rgba(255,150,51,0.25); }
+    .status-in-progress::before { background: #ff9633; box-shadow: 0 0 5px #ff9633; }
+
+    .status-finished { background: rgba(74,222,128,0.1); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); }
+    .status-finished::before { background: #4ade80; box-shadow: 0 0 5px #4ade80; }
+
+    /* ── Grid ──────────────────────────────────────────── */
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    /* ── Cards ─────────────────────────────────────────── */
+    .detail-card {
+      background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+
+    .detail-card + .detail-card { margin-top: 1.25rem; }
+
+    .card-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 150, 51, 0.85);
+      margin: 0 0 1.1rem;
+    }
+
+    /* ── Fields ────────────────────────────────────────── */
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem 1.5rem;
+    }
+
+    .field { display: flex; flex-direction: column; gap: 0.2rem; }
+
+    .field-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(247,247,247,0.35);
+    }
+
+    .field-value {
+      font-size: 0.92rem;
+      color: rgba(247,247,247,0.88);
+    }
+
+    .field-value.large {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #4ade80;
+    }
+
+    .field-full { grid-column: 1 / -1; }
+
+    /* ── Addon list ────────────────────────────────────── */
+    .addon-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .addon-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.025);
+      font-size: 0.88rem;
+    }
+
+    .addon-item-name { color: rgba(247,247,247,0.8); }
+    .addon-item-price { font-weight: 600; color: #60a5fa; }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.88rem;
+    }
+
+    .price-row:last-child { border-bottom: none; }
+    .price-row .label { color: rgba(247,247,247,0.55); }
+    .price-row .amount { font-weight: 600; }
+    .price-row.total .label { color: #f7f7f7; font-weight: 700; }
+    .price-row.total .amount { color: #4ade80; font-size: 1.15rem; font-weight: 700; }
+
+    .price-editor {
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .price-editor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.55rem;
+    }
+
+    .price-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .price-field-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(247,247,247,0.45);
+    }
+
+    .price-field-input {
+      width: 100%;
+      padding: 0.45rem 0.55rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.04);
+      color: rgba(247,247,247,0.9);
+      font: inherit;
+      font-size: 0.86rem;
+    }
+
+    .price-field-input:focus {
+      outline: none;
+      border-color: rgba(96, 165, 250, 0.45);
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+    }
+
+    .price-save-btn {
+      justify-self: start;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid rgba(96, 165, 250, 0.45);
+      border-radius: 7px;
+      background: rgba(96, 165, 250, 0.12);
+      color: #60a5fa;
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .price-save-btn:hover {
+      background: rgba(96, 165, 250, 0.2);
+      border-color: rgba(96, 165, 250, 0.6);
+    }
+
+    .price-save-btn:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    /* ── Status updater ────────────────────────────────── */
+    .status-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .status-opt {
+      padding: 0.5rem 0.25rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: transparent;
+      color: rgba(247,247,247,0.55);
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s;
+    }
+
+    .status-opt:hover { background: rgba(255,255,255,0.05); color: #f7f7f7; }
+    .status-opt.active-new { border-color: #60a5fa; background: rgba(96,165,250,0.12); color: #60a5fa; }
+    .status-opt.active-in-progress { border-color: #ff9633; background: rgba(255,150,51,0.12); color: #ff9633; }
+    .status-opt.active-finished { border-color: #4ade80; background: rgba(74,222,128,0.1); color: #4ade80; }
+
+    .status-note {
+      font-size: 0.78rem;
+      color: rgba(247,247,247,0.35);
+      margin: 0.6rem 0 0;
+      font-style: italic;
+    }
+
+    /* ── Notes / description ───────────────────────────── */
+    .notes-text {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: rgba(247,247,247,0.7);
+      margin: 0;
+      white-space: pre-wrap;
+    }
+
+    /* ── Editable textarea ─────────────────────────────── */
+    .editable-textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      color: rgba(247, 247, 247, 0.8);
+      font: inherit;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      resize: vertical;
+      min-height: 120px;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .editable-textarea:focus {
+      outline: none;
+      border-color: rgba(96, 165, 250, 0.45);
+      background-color: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+    }
+
+    .editable-textarea::placeholder {
+      color: rgba(247, 247, 247, 0.35);
+    }
+
+    /* ── Payment status ────────────────────────────────── */
+    .payment-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 0.75rem;
+    }
+
+    .payment-badge::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .payment-paid { background: rgba(74, 222, 128, 0.1); color: #4ade80; border-color: rgba(74, 222, 128, 0.3); }
+    .payment-paid::before { background: #4ade80; box-shadow: 0 0 5px #4ade80; }
+
+    .payment-waiting { background: rgba(255, 150, 51, 0.12); color: #ff9633; border-color: rgba(255, 150, 51, 0.3); }
+    .payment-waiting::before { background: #ff9633; box-shadow: 0 0 5px #ff9633; }
+
+    .payment-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .payment-opt {
+      padding: 0.5rem 0.25rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: transparent;
+      color: rgba(247, 247, 247, 0.55);
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s;
+    }
+
+    .payment-opt:hover { background: rgba(255, 255, 255, 0.05); color: #f7f7f7; }
+    .payment-opt.active-paid { border-color: #4ade80; background: rgba(74, 222, 128, 0.1); color: #4ade80; }
+    .payment-opt.active-waiting { border-color: #ff9633; background: rgba(255, 150, 51, 0.12); color: #ff9633; }
+
+    /* ── Add-ons management ────────────────────────────── */
+    .addon-manager {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+
+    .addon-add-form {
+      display: grid;
+      grid-template-columns: 1fr 80px;
+      gap: 0.5rem;
+    }
+
+    .addon-add-input {
+      padding: 0.42rem 0.6rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.04);
+      color: rgba(247, 247, 247, 0.8);
+      font: inherit;
+      font-size: 0.8rem;
+    }
+
+    .addon-add-input::placeholder { color: rgba(247, 247, 247, 0.3); }
+    .addon-add-input:focus {
+      outline: none;
+      border-color: rgba(96, 165, 250, 0.45);
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+    }
+
+    .addon-add-btn {
+      padding: 0.42rem 0.6rem;
+      border: 1px solid rgba(96, 165, 250, 0.45);
+      border-radius: 6px;
+      background: rgba(96, 165, 250, 0.12);
+      color: #60a5fa;
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .addon-add-btn:hover {
+      background: rgba(96, 165, 250, 0.2);
+      border-color: rgba(96, 165, 250, 0.6);
+    }
+
+    .addon-remove-btn {
+      padding: 0.3rem 0.5rem;
+      border: 1px solid rgba(255, 100, 100, 0.3);
+      border-radius: 4px;
+      background: transparent;
+      color: rgba(255, 100, 100, 0.7);
+      font: inherit;
+      font-size: 0.72rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .addon-remove-btn:hover {
+      background: rgba(255, 100, 100, 0.1);
+      border-color: rgba(255, 100, 100, 0.5);
+      color: #ff6464;
+    }
+
+    .addon-item-editable {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.025);
+      font-size: 0.88rem;
+    }
+
+    .addon-item-editable-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      flex: 1;
+    }
+
+    .addon-item-editable-name { color: rgba(247, 247, 247, 0.8); font-weight: 500; }
+    .addon-item-editable-price { color: rgba(247, 247, 247, 0.45); font-size: 0.75rem; }
+
+    /* ── Not found ─────────────────────────────────────── */
+    .not-found {
+      text-align: center;
+      padding: 5rem 2rem;
+      color: rgba(247,247,247,0.4);
+    }
+
+    .not-found h2 { font-size: 1.3rem; margin-bottom: 0.5rem; color: #f7f7f7; }
+
+    /* ── Responsive ────────────────────────────────────── */
+    @media (max-width: 760px) {
+      .detail-grid { grid-template-columns: 1fr; }
+      .field-grid { grid-template-columns: 1fr; }
+      .price-editor-grid { grid-template-columns: 1fr; }
+      .page-wrap { padding: 1.5rem 1rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ───────────────────────────────────────────── -->
+<header class="admin-header">
+  <a class="brand" href="/">
+    <img src="../Assets/logo.jpeg" alt="ZiggyLabs Development logo" />
+    <span>ZiggyLabs Development</span>
+    <span class="admin-badge">Admin</span>
+  </a>
+  <div class="header-actions">
+    <a class="admin-link-btn" href="/admin/bugs">Bug Reports</a>
+    <button class="admin-logout" id="logout-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      Logout
+    </button>
+  </div>
+</header>
+
+<!-- ── Page ─────────────────────────────────────────────── -->
+<div class="page-wrap" id="page-wrap">
+  <!-- Content rendered by JS -->
+</div>
+
+<script>
+  const API_BASE_URL = ADMIN_API_BASE_URL;
+  const ADMIN_LOGOUT_ENDPOINT = `${API_BASE_URL}/api/admin/logout`;
+  const ADMIN_CLIENTS_ENDPOINT = `${API_BASE_URL}/api/admin/clients`;
+
+  async function redirectToLogin() {
+    location.replace('/admin/login');
+  }
+
+  document.getElementById('logout-btn').addEventListener('click', async function () {
+    try {
+      await fetch(ADMIN_LOGOUT_ENDPOINT, {
+        method: 'POST',
+        credentials: 'include'
+      });
+    } catch (_) {
+    } finally {
+      redirectToLogin();
+    }
+  });
+
+  // ── Helpers ───────────────────────────────────────────────
+  const fmt = v => '$' + v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  function formatDate(iso) {
+    const d = new Date(iso + 'T00:00:00');
+    return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  }
+
+  function statusLabel(s) {
+    if (s === 'in-progress') return 'In Progress';
+    if (!s) return 'New';
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  async function requestAdmin(url, options) {
+    const response = await fetch(url, {
+      ...options,
+      credentials: 'include'
+    });
+
+    if (response.status === 401) {
+      redirectToLogin();
+      throw new Error('Authentication required.');
+    }
+
+    return response;
+  }
+
+  async function requestJson(url, options) {
+    const response = await requestAdmin(url, options);
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
+    }
+    return response.json();
+  }
+
+  // ── Get client from URL ───────────────────────────────────
+  const params = new URLSearchParams(location.search);
+  const id = parseInt(params.get('id'), 10);
+  const wrap = document.getElementById('page-wrap');
+
+  function renderNotFound(message) {
+    wrap.innerHTML = `
+      <div class="not-found">
+        <h2>Client not found</h2>
+        <p>${escapeHtml(message)}</p>
+        <a href="/admin" style="color:#60a5fa;text-decoration:none;font-weight:600;">← Back to dashboard</a>
+      </div>`;
+  }
+
+  function normalizeAddon(addon) {
+    return {
+      name: String(addon?.name || '').trim(),
+      price: Number(addon?.totalPrice ?? addon?.price ?? 0),
+      unitPrice: Number(addon?.unitPrice ?? addon?.price ?? addon?.totalPrice ?? 0),
+      quantity: Math.max(1, Number(addon?.quantity || 1)),
+      type: String(addon?.type || '').trim(),
+      details: addon && typeof addon.details === 'object' && addon.details !== null ? addon.details : null
+    };
+  }
+
+  function renderClientView(client) {
+    const normalizedAddons = Array.isArray(client.addons) ? client.addons.map(normalizeAddon) : [];
+    const planPrice = Number(client.planPrice || 0);
+    const maintenancePrice = Number(client.maintenancePrice || 0);
+    const total = Number(client.total || 0);
+
+    document.title = `${client.name} — ZiggyLabs Development Admin`;
+
+    wrap.innerHTML = `
+      <a class="back-link" href="/admin">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to Clients
+      </a>
+
+      <div class="client-hero">
+        <div class="client-hero-left">
+          <h1>${escapeHtml(client.name)}</h1>
+          <div class="client-meta">
+            <span class="client-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              ${escapeHtml(client.email)}
+            </span>
+            <span class="client-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 7.27 7.27l1.72-1.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2z"/></svg>
+              ${escapeHtml(client.phone || 'Not provided')}
+            </span>
+            <span class="client-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              ${formatDate(client.date)}
+            </span>
+          </div>
+        </div>
+        <span class="status-badge status-${client.status}" id="status-display">
+          ${statusLabel(client.status)}
+        </span>
+      </div>
+
+      <div class="detail-grid">
+
+        <!-- Left column -->
+        <div>
+          <!-- Project Info -->
+          <div class="detail-card">
+            <p class="card-title">Project Details</p>
+            <div class="field-grid">
+              <div class="field">
+                <span class="field-label">Plan</span>
+                <span class="field-value">${escapeHtml(client.plan)}</span>
+              </div>
+              <div class="field">
+                <span class="field-label">Website Goal</span>
+                <span class="field-value">${escapeHtml(client.websiteGoal || '—')}</span>
+              </div>
+              <div class="field">
+                <span class="field-label">Timeline</span>
+                <span class="field-value">${escapeHtml(client.timeline || '—')}</span>
+              </div>
+              <div class="field">
+                <span class="field-label">Request Date</span>
+                <span class="field-value">${formatDate(client.date)}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add-ons -->
+          <div class="detail-card">
+            <p class="card-title">Selected Add-ons</p>
+            <ul class="addon-list" id="addon-list"></ul>
+            <div class="addon-manager" id="addon-manager"></div>
+          </div>
+
+          <!-- Notes -->
+          <div class="detail-card">
+            <p class="card-title">Internal Notes</p>
+            <textarea class="editable-textarea" id="notes-input" placeholder="Add internal notes here..."></textarea>
+          </div>
+
+          <!-- Project description -->
+          <div class="detail-card">
+            <p class="card-title">Client's Project Description</p>
+            <p class="notes-text">${escapeHtml(client.projectDetails || 'No project description provided.')}</p>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div>
+          <!-- Financial -->
+          <div class="detail-card">
+            <p class="card-title">Financial Summary</p>
+            <div id="financial-summary-body"></div>
+            <div class="price-editor">
+              <div class="price-editor-grid">
+                <label class="price-field">
+                  <span class="price-field-label">Plan Price</span>
+                  <input id="plan-price-input" class="price-field-input" type="number" min="0" step="0.01" inputmode="decimal">
+                </label>
+                <label class="price-field">
+                  <span class="price-field-label">Maintenance Price</span>
+                  <input id="maintenance-price-input" class="price-field-input" type="number" min="0" step="0.01" inputmode="decimal">
+                </label>
+              </div>
+              <button type="button" class="price-save-btn" id="save-pricing-btn">Save Pricing</button>
+              <p class="status-note">Use this to adjust pricing for this client regardless of selected plan.</p>
+            </div>
+          </div>
+
+          <!-- Status -->
+          <div class="detail-card">
+            <p class="card-title">Project Status</p>
+            <div class="status-options">
+              <button class="status-opt ${client.status === 'new' ? 'active-new' : ''}" data-status="new">New</button>
+              <button class="status-opt ${client.status === 'in-progress' ? 'active-in-progress' : ''}" data-status="in-progress">In Progress</button>
+              <button class="status-opt ${client.status === 'finished' ? 'active-finished' : ''}" data-status="finished">Finished</button>
+            </div>
+            <p class="status-note">Updates are saved to the database.</p>
+          </div>
+
+          <!-- Payment Status -->
+          <div class="detail-card">
+            <p class="card-title">Payment Status</p>
+            <div class="payment-badge" id="payment-display">
+              <span id="payment-label">Waiting on Payment</span>
+            </div>
+            <div class="payment-options">
+              <button class="payment-opt" data-payment="waiting">Waiting</button>
+              <button class="payment-opt" data-payment="paid">Paid</button>
+            </div>
+            <p class="status-note">Updates are saved to the database.</p>
+          </div>
+        </div>
+
+      </div><!-- /.detail-grid -->
+    `;
+
+    let clientState = {
+      ...client,
+      planPrice,
+      maintenancePrice,
+      total,
+      addons: normalizedAddons,
+      status: client.status || 'new',
+      paymentStatus: client.paymentStatus || 'waiting',
+      notes: client.notes || ''
+    };
+
+    const notesInput = document.getElementById('notes-input');
+    notesInput.value = clientState.notes;
+
+    const addonList = document.getElementById('addon-list');
+    const addonManager = document.getElementById('addon-manager');
+    const financialSummaryBody = document.getElementById('financial-summary-body');
+    const planPriceInput = document.getElementById('plan-price-input');
+    const maintenancePriceInput = document.getElementById('maintenance-price-input');
+    const savePricingBtn = document.getElementById('save-pricing-btn');
+
+    const requestUpdate = async (updates) => {
+      const payload = await requestJson(`${ADMIN_CLIENTS_ENDPOINT}/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updates)
+      });
+      return payload.client;
+    };
+
+    const syncClientState = (updatedClient) => {
+      clientState = {
+        ...updatedClient,
+        planPrice: Number(updatedClient.planPrice || 0),
+        maintenancePrice: Number(updatedClient.maintenancePrice || 0),
+        total: Number(updatedClient.total || 0),
+        addons: Array.isArray(updatedClient.addons) ? updatedClient.addons.map(normalizeAddon) : []
+      };
+    };
+
+    const renderAddons = () => {
+      if (clientState.addons.length === 0) {
+        addonList.innerHTML = '<li style="color:rgba(247,247,247,0.35);font-size:0.88rem;padding:0.35rem 0;">No add-ons selected</li>';
+      } else {
+        addonList.innerHTML = clientState.addons.map((addon, index) => `
+          <li class="addon-item-editable">
+            <div class="addon-item-editable-content">
+              <div class="addon-item-editable-name">${escapeHtml(addon.name)}</div>
+              ${addon.type === 'extra-pages' ? `<div class="addon-item-editable-meta">Pages: ${Math.max(1, Number(addon.quantity || 1))}</div>` : ''}
+              ${addon.type === 'logo-design' && addon.details?.logoIdea ? `<div class="addon-item-editable-meta">Logo idea: ${escapeHtml(addon.details.logoIdea)}</div>` : ''}
+              <div class="addon-item-editable-price">+${fmt(Number(addon.price || 0))}</div>
+            </div>
+            <button class="addon-remove-btn" data-index="${index}">Remove</button>
+          </li>
+        `).join('');
+
+        document.querySelectorAll('.addon-remove-btn').forEach(btn => {
+          btn.addEventListener('click', async function () {
+            const index = Number(this.dataset.index);
+            const nextAddons = clientState.addons.filter((_, i) => i !== index);
+            try {
+              const updatedClient = await requestUpdate({ addons: nextAddons });
+              syncClientState(updatedClient);
+              renderAddons();
+              renderFinancialSummary();
+            } catch (error) {
+              console.error('Failed to remove add-on:', error);
+              alert('Could not update add-ons right now.');
+            }
+          });
+        });
+      }
+    };
+
+    const renderFinancialSummary = () => {
+      let html = `
+        <div class="price-row">
+          <span class="label">Base (${escapeHtml(clientState.plan)})</span>
+          <span class="amount">${fmt(clientState.planPrice)}</span>
+        </div>`;
+
+      if (clientState.maintenancePrice > 0) {
+        html += `
+          <div class="price-row">
+            <span class="label">Maintenance (${escapeHtml(clientState.maintenance || 'Selected')})</span>
+            <span class="amount">+${fmt(clientState.maintenancePrice)}</span>
+          </div>`;
+      }
+
+      html += clientState.addons.map(addon => `
+        <div class="price-row">
+          <span class="label">${escapeHtml(addon.name)}</span>
+          <span class="amount">+${fmt(Number(addon.price || 0))}</span>
+        </div>
+      `).join('');
+
+      html += `
+        <div class="price-row total">
+          <span class="label">Total</span>
+          <span class="amount">${fmt(Number(clientState.total || 0))}</span>
+        </div>`;
+
+      financialSummaryBody.innerHTML = html;
+    };
+
+    const syncPricingInputs = () => {
+      if (planPriceInput) {
+        planPriceInput.value = Number(clientState.planPrice || 0).toFixed(2);
+      }
+      if (maintenancePriceInput) {
+        maintenancePriceInput.value = Number(clientState.maintenancePrice || 0).toFixed(2);
+      }
+    };
+
+    const updateStatusDisplay = () => {
+      const badge = document.getElementById('status-display');
+      badge.className = `status-badge status-${clientState.status}`;
+      badge.textContent = statusLabel(clientState.status);
+      document.querySelectorAll('.status-opt').forEach(button => {
+        button.className = 'status-opt';
+        if (button.dataset.status === clientState.status) {
+          button.classList.add(`active-${clientState.status}`);
+        }
+      });
+    };
+
+    const updatePaymentDisplay = () => {
+      const display = document.getElementById('payment-display');
+      const label = document.getElementById('payment-label');
+      const isPaid = clientState.paymentStatus === 'paid';
+      display.className = `payment-badge ${isPaid ? 'payment-paid' : 'payment-waiting'}`;
+      label.textContent = isPaid ? 'Paid' : 'Waiting on Payment';
+      document.querySelectorAll('.payment-opt').forEach(button => {
+        button.className = 'payment-opt';
+        if (button.dataset.payment === clientState.paymentStatus) {
+          button.classList.add(`active-${clientState.paymentStatus}`);
+        }
+      });
+    };
+
+    // Status toggle
+    document.querySelectorAll('.status-opt').forEach(btn => {
+      btn.addEventListener('click', async function () {
+        const nextStatus = this.dataset.status;
+        if (nextStatus === clientState.status) return;
+
+        const previousStatus = clientState.status;
+        clientState.status = nextStatus;
+        updateStatusDisplay();
+
+        try {
+          const updatedClient = await requestUpdate({ status: nextStatus });
+          syncClientState(updatedClient);
+          updateStatusDisplay();
+          renderFinancialSummary();
+        } catch (error) {
+          console.error('Failed to update status:', error);
+          clientState.status = previousStatus;
+          updateStatusDisplay();
+          alert('Could not save status update.');
+        }
+      });
+    });
+
+    // Payment status toggle
+    document.querySelectorAll('.payment-opt').forEach(btn => {
+      btn.addEventListener('click', async function () {
+        const nextPaymentStatus = this.dataset.payment;
+        if (nextPaymentStatus === clientState.paymentStatus) return;
+
+        const previousPaymentStatus = clientState.paymentStatus;
+        clientState.paymentStatus = nextPaymentStatus;
+        updatePaymentDisplay();
+
+        try {
+          const updatedClient = await requestUpdate({ paymentStatus: nextPaymentStatus });
+          syncClientState(updatedClient);
+          updatePaymentDisplay();
+        } catch (error) {
+          console.error('Failed to update payment status:', error);
+          clientState.paymentStatus = previousPaymentStatus;
+          updatePaymentDisplay();
+          alert('Could not save payment status update.');
+        }
+      });
+    });
+
+    // Notes editor
+    notesInput.addEventListener('change', async function () {
+      const notes = this.value;
+      try {
+        const updatedClient = await requestUpdate({ notes });
+        syncClientState(updatedClient);
+      } catch (error) {
+        console.error('Failed to update notes:', error);
+        alert('Could not save notes update.');
+        notesInput.value = clientState.notes || '';
+      }
+    });
+
+    // Pricing editor
+    savePricingBtn.addEventListener('click', async function () {
+      const nextPlanPrice = parseFloat(planPriceInput.value);
+      const nextMaintenancePrice = parseFloat(maintenancePriceInput.value);
+
+      if (!Number.isFinite(nextPlanPrice) || nextPlanPrice < 0 || !Number.isFinite(nextMaintenancePrice) || nextMaintenancePrice < 0) {
+        alert('Please enter valid non-negative prices.');
+        return;
+      }
+
+      const previousPlanPrice = clientState.planPrice;
+      const previousMaintenancePrice = clientState.maintenancePrice;
+
+      savePricingBtn.disabled = true;
+      savePricingBtn.textContent = 'Saving...';
+
+      try {
+        const updatedClient = await requestUpdate({
+          planPrice: Number(nextPlanPrice.toFixed(2)),
+          maintenancePrice: Number(nextMaintenancePrice.toFixed(2))
+        });
+        syncClientState(updatedClient);
+        renderFinancialSummary();
+        syncPricingInputs();
+      } catch (error) {
+        console.error('Failed to update pricing:', error);
+        clientState.planPrice = previousPlanPrice;
+        clientState.maintenancePrice = previousMaintenancePrice;
+        syncPricingInputs();
+        alert('Could not save pricing update.');
+      } finally {
+        savePricingBtn.disabled = false;
+        savePricingBtn.textContent = 'Save Pricing';
+      }
+    });
+
+    // Create add-ons form
+    const addonNameInput = document.createElement('input');
+    addonNameInput.type = 'text';
+    addonNameInput.className = 'addon-add-input';
+    addonNameInput.placeholder = 'Add-on name';
+    addonNameInput.style = 'grid-column: 1';
+
+    const addonPriceInput = document.createElement('input');
+    addonPriceInput.type = 'number';
+    addonPriceInput.className = 'addon-add-input';
+    addonPriceInput.placeholder = '$0.00';
+    addonPriceInput.step = '0.01';
+    addonPriceInput.min = '0';
+    addonPriceInput.style = 'grid-column: 2';
+
+    const addonAddBtn = document.createElement('button');
+    addonAddBtn.className = 'addon-add-btn';
+    addonAddBtn.textContent = 'Add';
+    addonAddBtn.style = 'grid-column: 2';
+
+    const addonForm = document.createElement('div');
+    addonForm.className = 'addon-add-form';
+    addonForm.appendChild(addonNameInput);
+    addonForm.appendChild(addonPriceInput);
+
+    const addonBtnContainer = document.createElement('div');
+    addonBtnContainer.style = 'display: flex; gap: 0.5rem;';
+    addonBtnContainer.appendChild(addonAddBtn);
+
+    addonManager.appendChild(addonForm);
+    addonManager.appendChild(addonBtnContainer);
+
+    addonAddBtn.addEventListener('click', async () => {
+      const name = addonNameInput.value.trim();
+      const price = parseFloat(addonPriceInput.value) || 0;
+      if (name && price > 0) {
+        const nextAddons = [...clientState.addons, { name, price, unitPrice: price, quantity: 1 }];
+        try {
+          const updatedClient = await requestUpdate({ addons: nextAddons });
+          syncClientState(updatedClient);
+          addonNameInput.value = '';
+          addonPriceInput.value = '';
+          renderAddons();
+          renderFinancialSummary();
+        } catch (error) {
+          console.error('Failed to add add-on:', error);
+          alert('Could not add add-on right now.');
+        }
+      }
+    });
+
+    updateStatusDisplay();
+    updatePaymentDisplay();
+    renderAddons();
+    renderFinancialSummary();
+    syncPricingInputs();
+  }
+
+  async function initClientPage() {
+    if (!Number.isInteger(id) || id <= 0) {
+      renderNotFound('Invalid client id.');
+      return;
+    }
+
+    try {
+      const payload = await requestJson(`${ADMIN_CLIENTS_ENDPOINT}/${id}`);
+      if (!payload.client) {
+        renderNotFound('The client you\'re looking for does not exist.');
+        return;
+      }
+      renderClientView(payload.client);
+    } catch (error) {
+      console.error('Failed to load client details:', error);
+      renderNotFound('We could not load this client from the backend.');
+    }
+  }
+
+  initClientPage();
+</script>
+</body>
+</html>

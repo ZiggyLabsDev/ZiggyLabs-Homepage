@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bug Reports — ZiggyLabs Development Admin</title>
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <script>
+    const ADMIN_API_BASE_URL = window.location.protocol === 'file:' ? 'http://localhost:3000' : '';
+    const ADMIN_SESSION_ENDPOINT = `${ADMIN_API_BASE_URL}/api/admin/session`;
+
+    fetch(ADMIN_SESSION_ENDPOINT, { credentials: 'include' })
+      .then((response) => response.ok ? response.json() : null)
+      .then((payload) => {
+        if (!payload || !payload.authenticated) {
+          location.replace('/admin/login');
+        }
+      })
+      .catch(() => {
+        location.replace('/admin/login');
+      });
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #050505;
+      color: #f7f7f7;
+    }
+    .admin-header {
+      height: 3.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0 1.5rem;
+      background: rgba(7, 7, 10, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: #f7f7f7;
+    }
+    .brand img {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .admin-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ff9633;
+      background: rgba(255, 150, 51, 0.1);
+      border: 1px solid rgba(255, 150, 51, 0.25);
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .admin-link,
+    .admin-logout {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      min-height: 2.5rem;
+      padding: 0 0.95rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font: inherit;
+      font-size: 0.85rem;
+    }
+    .admin-link {
+      border: 1px solid rgba(96, 165, 250, 0.25);
+      color: #93c5fd;
+      background: rgba(59, 130, 246, 0.08);
+    }
+    .admin-logout {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: transparent;
+      color: rgba(247, 247, 247, 0.65);
+      cursor: pointer;
+    }
+    .page-wrap {
+      width: min(100% - 2rem, 1120px);
+      margin: 0 auto;
+      padding: 2rem 0 4rem;
+    }
+    .hero-card {
+      margin-bottom: 1.25rem;
+      padding: 1.4rem 1.5rem;
+      border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .hero-card h1 {
+      margin: 0 0 0.35rem;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+    }
+    .hero-card p {
+      margin: 0;
+      color: rgba(247,247,247,0.62);
+      line-height: 1.7;
+    }
+    .bug-list {
+      display: grid;
+      gap: 1rem;
+    }
+    .bug-card {
+      padding: 1.3rem 1.4rem;
+      border-radius: 18px;
+      background: rgba(14, 14, 20, 0.9);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.22);
+    }
+    .bug-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 0.9rem;
+    }
+    .bug-headline {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .bug-title {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+    .bug-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .bug-date {
+      color: rgba(247,247,247,0.45);
+      font-size: 0.84rem;
+      white-space: nowrap;
+    }
+    .bug-delete-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.2rem;
+      padding: 0 0.8rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 100, 100, 0.3);
+      background: rgba(255, 80, 80, 0.08);
+      color: #ff9b9b;
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .bug-delete-btn:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+    .bug-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      margin-bottom: 0.85rem;
+      color: rgba(247,247,247,0.58);
+      font-size: 0.88rem;
+    }
+    .bug-meta a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+    .bug-details {
+      margin: 0;
+      white-space: pre-wrap;
+      color: rgba(247,247,247,0.82);
+      line-height: 1.7;
+    }
+    .empty-state {
+      padding: 1.2rem 1.3rem;
+      border-radius: 16px;
+      border: 1px dashed rgba(255,255,255,0.14);
+      color: rgba(247,247,247,0.55);
+    }
+    @media (max-width: 760px) {
+      .admin-header { padding: 0 1rem; }
+      .page-wrap { width: min(100% - 1rem, 1120px); padding-top: 1rem; }
+      .header-actions { gap: 0.5rem; }
+      .admin-link, .admin-logout { padding: 0 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="admin-header">
+    <a class="brand" href="/">
+      <img src="../Assets/logo.jpeg" alt="ZiggyLabs Development logo" />
+      <span>ZiggyLabs Development</span>
+      <span class="admin-badge">Admin</span>
+    </a>
+    <div class="header-actions">
+      <a class="admin-link" href="/admin">Clients</a>
+      <button class="admin-logout" id="logout-btn">Logout</button>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="hero-card">
+      <h1>Bug Reports</h1>
+      <p>Incoming reports from the public bug page appear here in newest-first order.</p>
+    </section>
+
+    <section class="bug-list" id="bug-list">
+      <div class="empty-state">Loading bug reports...</div>
+    </section>
+  </main>
+
+  <script>
+    const API_BASE_URL = ADMIN_API_BASE_URL;
+    const ADMIN_LOGOUT_ENDPOINT = `${API_BASE_URL}/api/admin/logout`;
+    const ADMIN_BUG_REPORTS_ENDPOINT = `${API_BASE_URL}/api/admin/bug-reports`;
+    const bugList = document.getElementById('bug-list');
+    let reportsState = [];
+
+    function redirectToLogin() {
+      location.replace('/admin/login');
+    }
+
+    document.getElementById('logout-btn').addEventListener('click', async function () {
+      try {
+        await fetch(ADMIN_LOGOUT_ENDPOINT, { method: 'POST', credentials: 'include' });
+      } catch (_) {
+      } finally {
+        redirectToLogin();
+      }
+    });
+
+    function formatDate(value) {
+      const date = new Date(value);
+      return date.toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    async function requestAdmin(url, options) {
+      const response = await fetch(url, { ...options, credentials: 'include' });
+      if (response.status === 401) {
+        redirectToLogin();
+        throw new Error('Authentication required.');
+      }
+      return response;
+    }
+
+    function renderReports() {
+      if (!reportsState.length) {
+        bugList.innerHTML = '<div class="empty-state">No bug reports yet.</div>';
+        return;
+      }
+
+      bugList.innerHTML = reportsState.map((report) => `
+        <article class="bug-card" data-report-id="${report.id}">
+          <div class="bug-top">
+            <div class="bug-headline">
+              <h2 class="bug-title">${escapeHtml(report.summary)}</h2>
+            </div>
+            <div class="bug-actions">
+              <div class="bug-date">${escapeHtml(formatDate(report.createdAt))}</div>
+              <button class="bug-delete-btn" type="button" data-action="delete-report" data-report-id="${report.id}" data-report-summary="${escapeHtml(report.summary)}">Delete</button>
+            </div>
+          </div>
+          <div class="bug-meta">
+            <span>Reporter: ${escapeHtml(report.name || 'Anonymous')}</span>
+            ${report.email ? `<a href="mailto:${escapeHtml(report.email)}">${escapeHtml(report.email)}</a>` : '<span>No email provided</span>'}
+            ${report.pageUrl ? `<a href="${escapeHtml(report.pageUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(report.pageUrl)}</a>` : '<span>No page URL provided</span>'}
+          </div>
+          <p class="bug-details">${escapeHtml(report.details)}</p>
+        </article>
+      `).join('');
+    }
+
+    async function init() {
+      try {
+        const response = await requestAdmin(ADMIN_BUG_REPORTS_ENDPOINT);
+        if (!response.ok) {
+          throw new Error(`Failed to load bug reports: ${response.status}`);
+        }
+
+        const payload = await response.json();
+        reportsState = Array.isArray(payload.reports) ? payload.reports : [];
+        renderReports();
+      } catch (error) {
+        console.error('Failed to load bug reports:', error);
+        bugList.innerHTML = '<div class="empty-state">Could not load bug reports from the backend.</div>';
+      }
+    }
+
+    bugList.addEventListener('click', async function (event) {
+      const button = event.target.closest('[data-action="delete-report"]');
+      if (!button) return;
+
+      const reportId = button.dataset.reportId;
+      const reportSummary = button.dataset.reportSummary || 'this bug report';
+      const confirmed = window.confirm(`Delete "${reportSummary}"? This cannot be undone.`);
+      if (!confirmed) return;
+
+      button.disabled = true;
+      button.textContent = 'Deleting...';
+
+      try {
+        const response = await requestAdmin(`${ADMIN_BUG_REPORTS_ENDPOINT}/${reportId}`, { method: 'DELETE' });
+        if (!response.ok) {
+          const payload = await response.json().catch(() => ({}));
+          throw new Error(payload.message || `Delete failed with status ${response.status}`);
+        }
+
+        reportsState = reportsState.filter((report) => String(report.id) !== String(reportId));
+        renderReports();
+      } catch (error) {
+        console.error('Failed to delete bug report:', error);
+        window.alert(error.message || 'Could not delete bug report.');
+        button.disabled = false;
+        button.textContent = 'Delete';
+      }
+    });
+
+    init();
+  </script>
+</body>
+</html>

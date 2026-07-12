@@ -1,0 +1,13 @@
+{
+  "name": "ziggylabs-homepage",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "start:backend": "cd backend && node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}

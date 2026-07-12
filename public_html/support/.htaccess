@@ -1,0 +1,4 @@
+DirectoryIndex report-bug.html
+
+RewriteEngine On
+RewriteRule ^client/?$ client-report-bug.html [L]
