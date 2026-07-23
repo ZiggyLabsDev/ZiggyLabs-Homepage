@@ -7,20 +7,22 @@
     <meta name="description" content="Read the ZiggyLabs Development Terms of Service for website design, development, payments, revisions, and ownership terms." />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#050505" />
+    <link rel="icon" type="image/jpeg" href="/assets/favicon.jpeg" />
     <link rel="canonical" href="https://ziggylabs.dev/terms-of-service" />
     <link rel="stylesheet" href="../style.css?v=9999" />
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L1DDGPGRH3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L1DDGPGRH3');
+</script>
 <body>
     <header class="topbar" aria-label="Site navigation">
         <a class="brand" href="/" aria-label="Go to homepage">
-            <div class="logo-wrapper">
-                <!-- The live image: starts hidden via CSS and fades in only when your sister delivers the file -->
-                <img src="assets/logo.jpeg" alt="ZiggyLabs Development logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                
-                <!-- The pure developer text/glyph backup that displays automatically if the file isn't there -->
-                <div class="logo-fallback" aria-hidden="true">&lt;/&gt;</div>
-            </div>
-            <span class="brand-name">ZiggyLabs Development</span>
+            <img src="../assets/lg-logo.jpeg" style="height: 3rem; width: 8rem; border-radius: 30px;" alt="ZiggyLabs Delelopment">
         </a>
         <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="nav-menu" aria-expanded="false">
             <span></span>
@@ -125,6 +127,7 @@
         <div class="footer-inner">
             <div class="footer-brand">
                 <a class="brand" href="/" aria-label="Go to homepage">
+                    <img src="../assets/lg-logo.jpeg" alt="ZiggyLabs Development logo" style="border-radius: 30px;">
                     <span class="brand-name">ZiggyLabs Development</span>
                 </a>
                 <p class="footer-tagline">Custom websites built to convert.</p>
@@ -150,10 +153,11 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; <span id="footer-year"></span> ZiggyLabs Development. All rights reserved.</p>
+            <p>&copy; <span id="footer-year"></span> ZiggyLabs Development. All rights reserved.<a style="color: #00000000;" href="/admin" target="_blank">Admin</a></p>
         </div>
     </footer>
 
     <script src="../scripts/script.js"></script>
+    <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

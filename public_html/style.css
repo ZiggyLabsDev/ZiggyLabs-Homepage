@@ -353,67 +353,7 @@ canvas {
 .dev-banner a:hover {
     text-decoration: underline;
 }
-.brand {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.6rem;
-    color: var(--main-text-color);
-    text-decoration: none;
-    font-size: 1.1rem;
-    z-index: 51;
-    flex-shrink: 0;
-    transition: opacity 0.2s ease;
-}
-.brand:hover {
-    opacity: 0.85;
-}
-.brand img {
-    border-radius: 50%;
-    width: 2.2rem;
-    height: 2.2rem;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-.brand img:hover {
-    transform: scale(1.08);
-}
-.brand-name {
-    font-weight: 700;
-    font-size: 1.1rem;
-    letter-spacing: -0.01em;
-    color: var(--main-text-color);
-    text-decoration: none !important;
-}
-.logo-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-}
 
-.logo-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-.logo-fallback {
-    display: none; /* Controlled automatically by the HTML onerror script */
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: var(--accent-color-dim, #1e293b); /* Clean dark background */
-    color: var(--accent-color, #3b82f6); /* Your vibrant brand blue */
-    font-family: monospace;
-    font-weight: 800;
-    font-size: 0.85rem;
-    border-radius: 6px;
-    border: 1px solid rgba(59, 130, 246, 0.2);
-}
 
 .topbar nav {
     height: 100%;
@@ -1857,7 +1797,7 @@ body.nav-open {
 .footer-bottom p {
     margin: 0;
     font-size: 0.82rem;
-    color: rgba(247, 247, 247, 0.3);
+    color: rgba(247, 247, 247, 0.598);
 }
 
 /* Legal pages */

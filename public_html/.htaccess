@@ -1,0 +1,9 @@
+RewriteRule ^\.builds - [F,L]
+PassengerAppRoot /home/u591568517/domains/ziggylabs.dev/nodejs
+PassengerAppType node
+PassengerNodejs /opt/alt/alt-nodejs20/root/bin/node
+PassengerStartupFile server.js
+PassengerBaseURI /
+PassengerRestartDir /home/u591568517/domains/ziggylabs.dev/nodejs/tmp
+SetEnv NODE_OPTIONS "--require /home/u591568517/domains/ziggylabs.dev/public_html/.builds/config/preload-timestamp.js"
+SetEnv LSNODE_CONSOLE_LOG console.log

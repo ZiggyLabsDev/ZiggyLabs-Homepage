@@ -1,0 +1,507 @@
+{"timestamp":"2026-07-11T16:11:21.961Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-07-11T16:11:21.993Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-11T16:11:23.410Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-07-11T16:11:23.442Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-11T16:11:23.704Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:11:23.704Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:12:18.609Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:12:18.614Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:15:43.106Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:18:12.443Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:18:12.446Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:20:16.187Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:20:16.224Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:33:36.182Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:33:36.184Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:35:58.698Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:35:58.704Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:41:15.272Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:41:15.277Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:41:20.565Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:41:20.568Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T16:49:36.073Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T17:07:58.234Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T17:07:58.236Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T17:29:18.077Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-07-11T17:29:18.106Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-11T17:52:12.404Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-11T17:52:12.829Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T17:52:12.873Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T18:16:34.534Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-11T18:52:47.981Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-07-11T18:52:48.045Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-11T18:52:48.500Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-11T20:22:14.317Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-07-11T20:22:14.351Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-11T20:22:14.529Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T20:44:28.455Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T20:44:28.463Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T20:47:54.830Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T22:29:24.923Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-07-11T22:29:24.950Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-11T22:29:25.088Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-11T22:54:01.400Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-11T23:45:00.824Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-07-11T23:45:00.853Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T00:06:12.519Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T00:06:12.531Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T00:06:12.822Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T00:55:06.170Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-07-12T00:55:06.201Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T00:55:06.333Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T00:55:06.336Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T00:55:06.623Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T00:55:09.569Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T00:55:09.571Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T00:55:09.695Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T00:55:12.757Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T00:55:12.844Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T01:14:55.778Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T01:14:55.800Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T01:14:56.065Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T01:15:03.487Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T01:15:18.949Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T01:59:15.625Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-07-12T01:59:15.649Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T01:59:15.675Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/wp-login.php'"}
+{"timestamp":"2026-07-12T02:47:01.244Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T02:47:01.246Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T02:48:07.103Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T02:48:08.142Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T02:48:21.822Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T03:06:14.852Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-07-12T03:06:14.885Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T03:25:42.860Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T03:25:42.861Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T03:25:43.340Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T04:07:53.912Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-07-12T04:07:53.935Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T04:11:34.873Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T04:14:34.909Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T04:14:34.919Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T04:14:45.319Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T04:14:46.734Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T04:14:46.739Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T04:14:47.871Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T04:14:49.150Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T04:14:49.383Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T04:20:16.660Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T04:20:16.678Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T04:20:19.266Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T04:22:30.408Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T06:37:53.362Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-07-12T06:37:53.388Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T08:13:45.115Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-07-12T08:13:45.156Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T08:13:49.721Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T08:13:52.840Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T08:13:52.840Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T08:13:54.403Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T08:13:55.186Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/ads.txt'"}
+{"timestamp":"2026-07-12T08:13:55.401Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/app-ads.txt'"}
+{"timestamp":"2026-07-12T08:13:55.616Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/sellers.json'"}
+{"timestamp":"2026-07-12T09:35:08.733Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-07-12T09:35:08.770Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T09:35:10.213Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T09:35:10.377Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T09:35:10.558Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T09:35:10.726Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T09:35:10.870Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T09:35:13.588Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T09:35:13.733Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T09:35:13.867Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T09:56:04.139Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-07-12T09:56:04.175Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T10:53:40.285Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-07-12T10:53:40.317Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T10:59:37.106Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-07-12T10:59:37.132Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T10:59:37.158Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/wp-login.php'"}
+{"timestamp":"2026-07-12T12:00:25.261Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-07-12T12:00:25.294Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T12:00:25.324Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T12:00:25.551Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T12:00:25.782Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T12:00:25.996Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T12:00:26.221Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T12:00:47.337Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/info.php'"}
+{"timestamp":"2026-07-12T12:00:47.538Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/php.php'"}
+{"timestamp":"2026-07-12T12:00:47.753Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/i.php'"}
+{"timestamp":"2026-07-12T12:00:47.978Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/pi.php'"}
+{"timestamp":"2026-07-12T12:00:48.466Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/pinfo.php'"}
+{"timestamp":"2026-07-12T12:00:48.682Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/test.php'"}
+{"timestamp":"2026-07-12T12:00:48.893Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/phpinfo'"}
+{"timestamp":"2026-07-12T12:00:49.136Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/p.php'"}
+{"timestamp":"2026-07-12T12:00:49.366Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/debug.php'"}
+{"timestamp":"2026-07-12T12:00:49.601Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/admin/phpinfo.php'"}
+{"timestamp":"2026-07-12T12:00:49.813Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/test/phpinfo.php'"}
+{"timestamp":"2026-07-12T12:00:50.035Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/dev/phpinfo.php'"}
+{"timestamp":"2026-07-12T12:00:50.252Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/old/phpinfo.php'"}
+{"timestamp":"2026-07-12T12:00:50.520Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/tmp/phpinfo.php'"}
+{"timestamp":"2026-07-12T12:00:50.747Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/public/phpinfo.php'"}
+{"timestamp":"2026-07-12T14:38:30.716Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-07-12T14:38:30.743Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T15:39:33.883Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-07-12T15:39:33.916Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T15:39:33.941Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/blog/robots.txt'"}
+{"timestamp":"2026-07-12T15:42:53.677Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T15:42:56.179Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T15:42:56.207Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T15:47:53.277Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-07-12T15:47:53.309Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T15:56:59.949Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T15:57:12.733Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T15:57:12.745Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T16:00:20.461Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T16:00:23.875Z","level":"ERROR","message":"ForbiddenError: Forbidden\n    at createHttpError (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:861:12)\n    at SendStream.error (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:168:31)\n    at SendStream.pipe (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/send/index.js:464:14)\n    at serveStatic (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/serve-static/index.js:124:12)\n    at Layer.handleRequest (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:342:13)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:297:9\n    at processParams (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:582:12)\n    at next (/home/u591568517/domains/ziggylabs.dev/nodejs/node_modules/router/index.js:291:5)\n    at /home/u591568517/domains/ziggylabs.dev/nodejs/backend/server.js:589:5"}
+{"timestamp":"2026-07-12T16:00:50.206Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T16:00:50.216Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T17:36:45.403Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-07-12T17:36:45.438Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T17:36:45.467Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T17:36:49.941Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T17:37:44.586Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T18:32:34.817Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T18:32:34.940Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.png'"}
+{"timestamp":"2026-07-12T18:33:25.597Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T18:33:25.598Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T18:33:25.967Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T19:11:38.905Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-07-12T19:11:39.080Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T19:18:17.974Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T19:18:19.700Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T19:18:26.727Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T19:18:27.012Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T19:33:16.271Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T19:33:20.686Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T20:53:21.271Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-07-12T20:53:21.304Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T20:53:21.716Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T20:53:27.001Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T20:55:16.248Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T20:55:16.254Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:00:58.151Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:00:58.173Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:01:01.601Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-12T21:01:01.679Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:01:02.397Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:02:28.581Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:02:28.584Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:02:56.209Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:03:45.320Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-07-12T21:03:45.342Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T21:03:45.880Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-07-12T21:03:45.902Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T21:03:45.907Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-07-12T21:03:45.933Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T21:03:46.464Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-07-12T21:03:46.487Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T21:03:47.856Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-07-12T21:03:47.877Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T21:04:17.951Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-07-12T21:04:17.981Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T21:04:18.749Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-07-12T21:04:18.775Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T21:04:19.061Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:04:19.064Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:11:37.627Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-07-12T21:11:37.655Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T21:11:37.986Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:11:37.986Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:31:35.706Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:37:04.098Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:37:08.117Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:37:13.279Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:37:13.342Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:53:37.972Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T21:53:38.018Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T22:14:58.874Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-07-12T22:14:58.895Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-12T22:14:59.096Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T22:50:18.145Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-12T22:50:29.982Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T01:02:04.709Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-07-13T01:02:04.742Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T01:02:04.940Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T01:02:04.944Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T01:02:05.364Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T01:12:25.560Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T02:12:36.738Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-07-13T02:12:36.768Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T02:12:47.309Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T02:12:53.568Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:12:53.607Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:18:07.819Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:25:11.170Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:25:11.208Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:36:32.593Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:36:32.597Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:38:55.808Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:38:55.832Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:38:57.083Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:38:57.157Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:39:51.733Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:49:30.454Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:49:30.460Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:51:34.845Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T02:51:34.978Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.png'"}
+{"timestamp":"2026-07-13T02:52:24.501Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T02:52:24.884Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T02:59:00.591Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T02:59:09.841Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/wp-login.php'"}
+{"timestamp":"2026-07-13T03:02:03.798Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/nodejs/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T03:14:46.822Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-07-13T03:14:46.854Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T03:20:43.067Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T03:20:43.087Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T03:20:43.557Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T03:37:33.376Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T03:37:33.377Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T03:37:33.644Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T04:17:58.750Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-07-13T04:17:58.780Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T04:17:58.814Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T05:43:52.857Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-07-13T05:43:52.892Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T05:43:52.921Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T06:02:09.289Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T06:02:09.292Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T06:02:09.664Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T06:23:27.376Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T06:23:42.874Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T06:25:15.459Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-07-13T06:25:15.499Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T06:25:15.534Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T06:31:06.901Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T06:45:16.594Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-07-13T06:45:16.630Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T06:45:16.665Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T06:58:19.097Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T06:58:19.102Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T06:58:30.940Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/cmd_sco'"}
+{"timestamp":"2026-07-13T06:58:38.368Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/cmd_sco'"}
+{"timestamp":"2026-07-13T06:58:42.436Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T06:58:42.439Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T07:54:18.011Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-07-13T07:54:18.045Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T07:54:18.083Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T07:54:18.086Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T07:54:18.297Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T08:46:57.533Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T08:58:54.007Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-07-13T08:58:54.038Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T08:58:54.067Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T09:06:58.374Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T09:06:58.375Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T09:06:59.553Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T09:51:16.757Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T09:51:16.925Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T09:51:17.509Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T10:15:34.084Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-07-13T10:15:34.116Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T10:15:34.163Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T11:14:14.234Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T12:34:34.840Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-07-13T12:34:34.867Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T12:34:34.891Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T14:04:56.253Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-07-13T14:04:56.314Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T14:04:56.671Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T15:09:43.653Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-07-13T15:09:43.691Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T15:09:43.727Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T15:09:43.737Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T15:09:43.737Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T15:09:43.740Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T15:09:52.585Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T15:09:52.587Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T15:09:53.001Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T15:10:13.128Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T15:10:22.006Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T16:09:55.400Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T16:09:55.403Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T16:17:34.429Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-07-13T16:17:34.456Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T16:17:34.490Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T16:17:34.492Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T16:17:35.425Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T16:19:06.506Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T17:22:35.510Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-07-13T17:22:35.541Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T17:28:49.677Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-07-13T17:28:49.710Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T17:28:49.745Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-login.php'"}
+{"timestamp":"2026-07-13T18:15:27.512Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-login.php'"}
+{"timestamp":"2026-07-13T18:15:36.008Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T18:15:36.089Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T18:15:36.248Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T18:15:40.230Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T18:18:26.331Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/ads.txt'"}
+{"timestamp":"2026-07-13T18:30:11.006Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-07-13T18:30:11.038Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T18:30:11.410Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T18:51:28.037Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/administrator/components/com_jce/config.xml'"}
+{"timestamp":"2026-07-13T19:33:33.262Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-07-13T19:33:33.291Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T20:48:51.747Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-07-13T20:48:51.785Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T20:48:52.082Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T20:52:35.742Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T20:52:35.744Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T20:53:10.181Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/apple-touch-icon.png'"}
+{"timestamp":"2026-07-13T20:53:10.943Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T21:22:52.590Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T21:22:53.486Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T21:31:48.788Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T21:33:15.405Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T21:36:01.120Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T21:36:01.133Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T22:03:32.095Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-07-13T22:03:32.127Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-13T22:03:32.173Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T22:03:32.173Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-13T22:03:32.319Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-13T23:56:15.724Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-07-13T23:56:15.757Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T00:07:35.736Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T00:35:41.100Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T02:51:31.935Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-07-14T02:51:31.965Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T02:51:32.023Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/administrator/components/com_sppagebuilder/config.xml'"}
+{"timestamp":"2026-07-14T04:03:05.668Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-07-14T04:03:05.698Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T04:03:05.741Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T04:03:05.741Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T04:03:06.170Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-14T04:03:40.764Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-07-14T04:03:40.804Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T04:10:18.501Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T04:25:20.191Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T04:32:42.840Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T04:46:42.209Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T05:04:32.119Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-07-14T05:04:32.153Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T05:04:32.184Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T05:18:56.502Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T05:28:49.766Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T05:45:04.555Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T05:57:52.051Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T06:03:16.836Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T06:04:31.793Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T06:13:57.204Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-07-14T06:13:57.236Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T06:13:57.267Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T06:28:04.455Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T06:33:07.940Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-07-14T06:33:07.998Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T06:38:16.156Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T06:41:08.437Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T06:59:41.664Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T07:00:04.973Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T07:13:35.505Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T07:22:37.515Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-07-14T07:22:37.544Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T07:22:37.571Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T07:22:59.000Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/ads.txt'"}
+{"timestamp":"2026-07-14T07:23:23.720Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T07:30:11.025Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T07:37:56.933Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T07:44:09.549Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T07:54:15.227Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T07:58:38.330Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T08:04:02.147Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T08:13:49.763Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T08:18:58.943Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T08:27:30.213Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-07-14T08:27:30.242Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T08:27:30.269Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T08:32:13.090Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T08:32:47.344Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T08:32:47.359Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T08:34:28.181Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T08:43:27.612Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T08:52:19.055Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-07-14T08:52:19.085Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T08:56:50.403Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T09:05:43.373Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T09:09:48.719Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-14T09:09:51.933Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T09:09:52.015Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T09:09:54.252Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/favicon.ico'"}
+{"timestamp":"2026-07-14T09:09:54.739Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/ads.txt'"}
+{"timestamp":"2026-07-14T09:09:54.899Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/app-ads.txt'"}
+{"timestamp":"2026-07-14T09:09:55.078Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/sellers.json'"}
+{"timestamp":"2026-07-14T09:12:28.204Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T09:20:42.597Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T09:23:53.672Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T09:31:25.580Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-07-14T09:31:25.651Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T09:31:25.683Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T09:36:02.951Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T09:38:29.710Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T09:50:56.500Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T09:52:51.516Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T10:07:47.742Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T10:10:00.904Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T10:26:17.813Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T10:37:37.997Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-07-14T10:37:38.032Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T10:37:38.061Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T10:43:20.338Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T10:54:27.521Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T10:57:06.845Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T11:09:04.135Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T11:11:07.866Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T11:18:52.578Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T11:23:32.273Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T11:32:04.790Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T11:42:52.571Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-07-14T11:42:52.612Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T11:42:52.644Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T11:57:46.076Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T12:02:31.188Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T12:11:04.459Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T12:22:54.566Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T12:23:57.905Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T12:37:52.704Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T12:43:22.317Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-07-14T12:43:22.356Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T12:43:22.388Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T12:44:28.928Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T12:50:25.098Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T12:58:56.038Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T13:03:13.728Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T13:03:33.462Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T13:17:24.783Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T13:26:13.285Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T13:29:33.231Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T13:43:08.367Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T13:57:02.597Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-07-14T13:57:02.627Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T13:57:02.722Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T13:58:58.826Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T14:09:20.309Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T14:19:36.250Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T14:22:15.211Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T14:38:01.076Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T14:41:04.345Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T14:41:52.414Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T14:47:57.467Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T14:49:52.632Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T15:04:30.741Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-07-14T15:04:30.774Z","level":"LOG","message":"Backend running on http://localhost:3000"}
+{"timestamp":"2026-07-14T15:04:30.810Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T15:07:18.314Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T15:16:27.163Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T15:29:23.495Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T15:34:46.241Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T15:34:56.544Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T15:39:54.713Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/wp-admin/install.php'"}
+{"timestamp":"2026-07-14T15:41:47.028Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T15:47:17.278Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T15:47:17.285Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T15:57:13.119Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/by'"}
+{"timestamp":"2026-07-14T16:01:49.243Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T16:01:54.556Z","level":"ERROR","message":"Error: ENOENT: no such file or directory, stat '/home/u591568517/domains/ziggylabs.dev/public_html/Assets/logo.jpeg'"}
+{"timestamp":"2026-07-14T16:07:18.655Z","level":"LOG","message":"◇ injected env (1) from backend/.env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-07-14T16:07:18.688Z","level":"LOG","message":"Backend running on http://localhost:3000"}
